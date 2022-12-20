@@ -226,7 +226,7 @@ module.exports = {
     //   chunks: ['about'],
     // }),
 
-    //ここに記載することにより各ファイルでimportする必要がなくなる
+    //ここに記載することにより, jQueryを各ファイルでimportする必要がなくなる
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'

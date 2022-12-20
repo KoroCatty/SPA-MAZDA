@@ -11,7 +11,12 @@ import HomeMv1 from "../../../../images/mv1.jpg";
 // import HomeMv2 from "../../../../images/mv2.jpg";
 // import HomeMv3 from "../../../../images/mv3.jpg";
 
-// generate weird files 
+import mvBanner1 from "../../../../images/banner1.svg";
+import mvBanner2 from "../../../../images/banner2.svg";
+// import mvBanner3 from "../../../../images/banner3.svg";
+
+
+
 // import jQuery from "jquery";
 // import $ from 'jquery';
 // import 'slick-carousel';
@@ -38,33 +43,35 @@ export const HomeMV = (props) => {
     return (
       <div
         className={className}
-        style={{ ...style, 
-        // backgroundColor: "red",
+        style={{
+          ...style,
+          // backgroundColor: "red",
         }}
         onClick={onClick}
       />
     );
   }
-  
+
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
       <div
         className={className}
-        style={{ ...style, 
+        style={{
+          ...style,
           // background: "green",
-         }}
+        }}
         onClick={onClick}
       />
     );
   }
-  
-  /* state変数を定義する↓  copied*/
-  const [active, setActive] = useState(false);
 
-  const classToggle = () => {
-    setActive(!active)
-  }
+  /* state変数を定義する↓  copied*/
+  // const [active, setActive] = useState(false);
+
+  // const classToggle = () => {
+  //   setActive(!active)
+  // }
 
   // 各セッティング
   const settings = {
@@ -73,6 +80,8 @@ export const HomeMV = (props) => {
     // centerPadding: "60px",
     // rows: 2,
     // slidesPerRow: 2,
+    // variableWidth: true,
+
     dots: false,
     infinite: true,
     speed: 500,
@@ -88,8 +97,12 @@ export const HomeMV = (props) => {
         breakpoint: 1800,
         settings: {
           slidesToShow: 1.65,
+          // slidesToShow: 0.9,
           slidesToScroll: 1,
           infinite: true,
+          // rows: 1,
+          // centerMode: true,
+          // variableWidth: true,
         }
       },
       {
@@ -102,8 +115,8 @@ export const HomeMV = (props) => {
         }
       },
     ],
-    
-// ドットのセッティング
+
+    // ドットのセッティング
     appendDots: dots => (
       <div
         style={{
@@ -125,46 +138,60 @@ export const HomeMV = (props) => {
           boxShadow: "1px 1px 7px white",//光らせる
         }}
       >
-        {i +1 }
+        {i + 1}
       </div>
     )
   };
 
 
   return (
-  
-  <>
-       <section className="mv">
-      
+
+    <>
+      <section className="mv">
+
         <Slider {...settings} className="mvWrap">
           <div className="mvWrap__item">
-             <img src={HomeMv1} alt="" className="mvWrap__item--img" /> 
+            <img src={HomeMv1} alt="" className="mvWrap__item--img" />
           </div>
           <div className="mvWrap__item">
-            <img src={HomeMv1} alt="" className="mvWrap__item--img" /> 
+            <img src={HomeMv1} alt="" className="mvWrap__item--img" />
           </div>
           <div className="mvWrap__item">
-             <img src={HomeMv1} alt="" className="mvWrap__item--img" /> 
+            <img src={HomeMv1} alt="" className="mvWrap__item--img" />
           </div>
           <div className="mvWrap__item spOnly">
-             <img src={HomeMv1} alt="" className="mvWrap__item--img" /> 
+            <img src={HomeMv1} alt="" className="mvWrap__item--img" />
           </div>
-          </Slider>
+        </Slider>
 
 
-<div className="mvBanner">
-  
-</div>
+        <div className="mvBanner">
+          <div className="mvBanner__item">
+            <a href="" className="">
+              <img src={mvBanner1} alt="" className="mvBanner__item--img" />
+            </a>
+          </div>
+          <div className="mvBanner__item">
+            <a href="" className="">
+              <img src={mvBanner2} alt="" className="mvBanner__item--img" />
+            </a>
+          </div>
+          <div className="mvBanner__item">
+            <a href="" className="">
+              <img src={mvBanner2} alt="" className="mvBanner__item--img" />
+            </a>
+          </div>
+        </div>
 
 
 
 
       </section>
-  
-  
-  
-  
-  </>
+
+
+
+
+    </>
 
 
   )
