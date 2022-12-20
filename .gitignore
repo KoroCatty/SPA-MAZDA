@@ -1,0 +1,5 @@
+node_modules/
+.DS_Store
+.env.local
+./src/javascripts/firebase.js
+firebase.js

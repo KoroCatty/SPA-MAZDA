@@ -1,0 +1,10 @@
+src/javascripts/*.js
+src/javascripts/service/*.js
+src/javascripts/service/firebase.js
+dist/javascripts/*.js
+webpack.config.js
+src/javascripts/React/*.jsx
+src/javascripts/React/Provider/*.jsx
+src/javascripts/React/Components/*.jsx
+src/javascripts/TypeScript/*.ts
+src/javascripts/TypeScript/*.tsx

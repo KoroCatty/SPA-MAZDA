@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "es6",
+    "target": "es5",
+    // "jsx": "react",
+    "noImplicitAny": false,//何も型の定義がない際にanyとして扱う
+    "jsx": "react-jsx",//tsxを使えるようにする
+    "sourceMap": true,
+    // "types": ["@emotion/react/types/css-prop"],// @emotionを使えるようにし、img輸入時require()不要にする
+
+// TS1192: Module '"./node_modules/@types/react/index"' has no default export.エラーを防ぐ
+    "allowSyntheticDefaultImports": true, 
+    "esModuleInterop": true,
+
+    "typeRoots": [
+      "node_modules/@types",
+      "types",
+    ],
+  },
+  //型定義 for tsx
+  "include": [
+    "src/**/*",
+    "types/**/*",
+    "./src/index.d.ts",
+  ],
+}

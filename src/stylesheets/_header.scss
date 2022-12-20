@@ -1,0 +1,241 @@
+@use 'reset' as *;
+@use 'setting' as *;
+
+.header {
+  width: 100vw;
+  background-color: rgb(58, 58, 58);
+  color: white;
+
+  @include mq(s) {
+  }
+  @include mq(m) {
+  }
+
+  &Wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+    @media screen and (max-width: 1080px) {
+      justify-content: space-around;
+    }
+  }
+
+  &Logo {
+  }
+
+  &Title {
+    margin-left: -40%;
+
+    @media screen and (max-width: 1080px) {
+      margin-left: -17%;
+    }
+  }
+
+  .headerContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__phone {
+      margin-right: -20px;
+
+      @media screen and (max-width: 1080px) {
+        display: none;
+      }
+    }
+
+    &__bar {
+      width: 72px;
+      background-color: #fff;
+      padding: 0.5px;
+      transform: rotate(270deg);
+
+      @media screen and (max-width: 1080px) {
+        display: none;
+      }
+    }
+
+    &__detail {
+      margin-left: -20px;
+
+      @media screen and (max-width: 1080px) {
+        display: none;
+      }
+    }
+  }
+
+  .headerSticky {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: none;
+
+    @media screen and (min-width: 1280px) {
+      display: block;
+    }
+  }
+}
+
+// Navigation ------------
+.nav {
+  background-color: black;
+  width: 100vw;
+
+  @include mq(s) {
+    display: none;
+  }
+  @include mq(m) {
+    display: none;
+  }
+
+  &Wrap {
+    height: 40px;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__item {
+      &--link {
+        color: white;
+      }
+    }
+  }
+}
+
+//----------------------------------------
+// Hamburger ----------------
+//----------------------------------------
+.navDrawer {
+  position: relative;
+  display: none;
+
+  // @include mq(s) {
+  //   display: block;
+  // }
+  // @include mq(m) {
+  //   display: block;
+  // }
+
+  @media screen and (max-width: 1080px) {
+    display: block;
+  }
+
+  &__input {
+    /*チェックが入ったらもろもろ表示*/
+    &:checked ~ #nav-close {
+      display: block; /*カバーを表示*/
+      opacity: 0.5;
+    }
+
+    &:checked ~ .BurgerContent {
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%); /*中身を表示*/
+      box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display: none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span,
+#nav-open span:before,
+#nav-open span:after {
+  position: absolute;
+  height: 3px; /*線の太さ*/
+  width: 25px; /*長さ*/
+  border-radius: 3px;
+  background: rgb(255, 255, 255);
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+#nav-open span:before {
+  bottom: -8px;
+}
+#nav-open span:after {
+  bottom: -16px;
+}
+
+/*閉じる用の薄黒カバー*/
+#nav-close {
+  display: none; /*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0; /*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+/*中身*/
+.BurgerContent {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; /*最前面に*/
+  width: 90%; /*右側に隙間を作る*/
+  max-width: 330px; /*最大幅*/
+  height: 100%;
+  // background: rgb(0, 0, 0); /*背景色*/
+  background: linear-gradient(
+    127deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(31, 31, 31) 45%,
+    rgba(147, 147, 147, 1) 100%
+  );
+  transition: 0.3s ease-in-out; /*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%); /*左に隠しておく*/
+  color: black;
+  padding: 20px 40px 60px 20px;
+
+  @include mq(s) {
+    width: 60%;
+    padding: 20px 8px 60px 20px;
+  }
+  @include mq(m) {
+  }
+
+  &__item {
+    margin-top: 30px;
+
+    @include mq(s) {
+      margin-top: 40px;
+    }
+
+    &--link {
+      font-size: 1.1rem;
+      color: white;
+
+      &.small {
+        font-size: 1.2rem;
+
+        @include mq(s) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

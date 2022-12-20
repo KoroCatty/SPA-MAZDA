@@ -1,0 +1,191 @@
+@use 'reset' as *;
+// @import "_reset.scss";
+
+@use 'setting' as *;
+// @import "_setting.scss";
+
+@use 'header' as *;
+// @import "_header.scss";
+
+@use 'Home' as *;
+// @import "_about.scss";
+
+@use 'About' as *;
+// @import "_about.scss";
+
+// $breakpoints: (
+//   's': 'screen and (max-width:480px)',
+//   'm': 'screen and (max-width: 767px) and (min-width:480px)',
+//   // 'l': 'screen and (max-width: 1080px) and (min-width: 768px)',
+//   'l': 'screen and (max-width: 1079px) and (min-width: 767px)',
+//   'xl': 'screen and (min-width: 1080px) ',
+// ) !default;
+
+// @mixin mq($breakpoint: md) {
+//   @media #{map-get($breakpoints, $breakpoint)} {
+//     @content;
+//   }
+// }
+
+// Tailwind CSS
+// @import "~tailwindcss/base";
+// @import "~tailwindcss/components";
+// @import "~tailwindcss/utilities";
+
+// Dark MOde
+// @media (prefers-color-scheme: dark) {
+//   body {
+//     background-color: black;
+//     color: white;
+//   }
+// }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: hidden auto; // To prevent scroll horizontally
+  // width: calc(100vw - 10px);
+  margin: 0;
+  font-family: YakuHanMPs_Noto, 'Noto Serif JP', 游明朝, 'Yu Mincho', YuMincho,
+    'Hiragino Mincho ProN', HGS明朝E, Meiryo, serif;
+}
+
+
+
+
+
+.red {
+  color: red;
+}
+
+
+
+
+
+//----------------------------------------
+// MV (main_visual)
+//----------------------------------------
+.mv {
+  // width: 1080px;
+  width: 99.9vw;
+  margin: 0 auto;
+  background-image: url(../images/bg.svg);
+
+
+  &Wrap {
+    margin: 0 auto;
+
+    &__item {
+      // width: 1080px !important;
+      // margin: 0 auto;
+      padding: 0 10px !important;
+
+      @include mq(s) {
+        // padding: 0 !important;
+      }
+
+      @include mq(m) {
+      //  padding: 0 !important;
+      }
+
+      @media screen and (max-width:1080px) {
+        padding: 0 !important;
+      }
+
+      &--img {
+        margin: 0 auto;
+        width: 1080px !important;
+        // width: 100%;
+        @media screen and (min-width:1800px) {
+          width: 92.2vw !important;
+          max-width: 100% !important;
+        }
+    
+      }
+
+      &.spOnly {
+        display: none;
+
+        @media screen and (max-width:1080px) {
+         display: block;
+        }
+      }
+    }
+  }
+}
+
+
+// --------------------------------------------------
+// Arrow button（HomeMV内で定義しているのここで編集ができる）
+// --------------------------------------------------
+
+.slick-prev {
+  left: 25% !important;
+  z-index: 1;
+ display: block;
+  background-color: red;
+
+  @media screen and (max-width:1080px) {
+    left: 0 !important;
+  }
+
+  &:before  {
+    font-size: 36px !important;
+    // content: "←" !important;
+  }
+}
+
+.slick-next {
+  right: 25% !important;
+  z-index: 1;
+ display: block;
+  background-color: rgb(38, 55, 238);
+
+  @media screen and (max-width:1080px) {
+    right: 5% !important;
+  }
+
+  &:before  {
+    font-size: 36px !important;
+  }
+}
+// --------------------------------------------------
+// Slick dots (HomeMV内でもCSS使用。ここでも編集している)
+// --------------------------------------------------
+.slick-dots {
+// background-color: red !important;
+background-image: url(../images/bg.svg);
+
+li {
+  width: 140px !important;
+  margin: 0 10px !important;
+
+  @include mq(s) {
+    width: 52px !important;
+    margin: 0;
+  }
+
+  @include mq(m) {
+    width: 100px !important;
+  }
+
+  :hover {
+    background-color: rgb(20, 20, 149) !important;
+    transition: all 0.4s ease !important;
+  
+  }
+}
+
+  &-active {
+
+    button {
+      // height: 16px !important;
+
+      &::before {
+        // color: red !important;
+      }
+    }
+  }
+}
