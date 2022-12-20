@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 
 import HomeMv1 from "../../../../images/mv1.jpg";
@@ -167,19 +168,19 @@ export const HomeMV = (props) => {
 
         <div className="mvBanner">
           <div className="mvBanner__item">
-            <a href="" className="">
+             <Link className="--link" to="/YouTube">
               <img src={mvBanner1} alt="" className="mvBanner__item--img" />
-            </a>
+           </Link>
           </div>
           <div className="mvBanner__item">
-            <a href="" className="">
+             <Link className="--link" to="/Blog">
               <img src={mvBanner2} alt="" className="mvBanner__item--img" />
-            </a>
+           </Link>
           </div>
           <div className="mvBanner__item">
-            <a href="" className="">
+             <Link className="--link" to="/Recruit">
               <img src={mvBanner2} alt="" className="mvBanner__item--img" />
-            </a>
+           </Link>
           </div>
         </div>
 

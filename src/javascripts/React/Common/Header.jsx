@@ -79,8 +79,9 @@ if (reactRoot) {
               </div>
             </div>
             <div className="headerSticky">マツダオフィシャルサイト</div>
-
-            {/*----------- Hamburger -----------*/}
+            {/* ------------------- */}
+            {/*----- Hamburger -----*/}
+            {/* ------------------- */}
             <div className="navDrawer">
               <input
                 id="nav-input"
@@ -105,7 +106,7 @@ if (reactRoot) {
               <ul className="BurgerContent">
                 {/* <BrowserRouter> */}
                 <li className="BurgerContent__item">
-                 <img src={logo} alt="" className="BurgerContent__item--img" />
+                  <img src={logo} alt="" className="BurgerContent__item--img" />
                 </li>
                 <li className="BurgerContent__item">
                   <Link className="BurgerContent__item--link" to="/">
@@ -128,7 +129,6 @@ if (reactRoot) {
                   </Link>
                 </li>
               </ul>
-
             </div>
           </div>
         </header>
