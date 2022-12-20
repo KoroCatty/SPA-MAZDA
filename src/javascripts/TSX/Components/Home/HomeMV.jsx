@@ -152,7 +152,9 @@ export const HomeMV = (props) => {
           </Slider>
 
 
-<div className=""></div>
+<div className="mvBanner">
+  
+</div>
 
 
 
