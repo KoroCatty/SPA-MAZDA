@@ -1,7 +1,7 @@
 // This file goes to PageRoute.jsx
 import * as React from 'react';
 
-// import {AboutBg} from "../Parts/About/AboutBg.jsx";
+import {AboutBg} from "../Components/About/AboutBg.jsx";
 // import {HomeAbout} from "../Parts/Home/HomeAbout.jsx";
 // import {HomeBlog} from "../Parts/Home/HomeBlog.jsx";
 // import {HomeRouting} from "../../../React/";
@@ -13,10 +13,8 @@ const About: React.FC = () => {
 
   return (
     <>
-    About page
-
-    Yaaaay
-      {/* <AboutBg /> */}
+    fasdfa
+      <AboutBg />
 
       {/* <HomeBlog /> */}
       {/* <HomeRouting /> */}
@@ -43,4 +41,4 @@ const About: React.FC = () => {
 
 
 export default About;
-// PageRoute.jsxでこのファイルを輸入する
+// Header.jsxでこのファイルを輸入する

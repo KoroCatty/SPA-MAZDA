@@ -3,7 +3,7 @@ import '../stylesheets/main.scss';
 // import './lang.js';
 
 // ページ毎のcomponent parts
-import './TSX/Components/Home/HomeMV.jsx';
+// import './TSX/Components/Home/HomeMV.jsx';
 
 
 // Import Common component parts

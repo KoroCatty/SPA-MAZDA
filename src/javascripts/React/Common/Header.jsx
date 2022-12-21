@@ -3,6 +3,10 @@
 import * as React from 'react';
 import ReactDom from 'react-dom';
 
+import Home from '../../TSX/EachPage/Home.tsx';
+import About from '../../TSX/EachPage/About.tsx';
+import Service from '../../TSX/EachPage/Service.tsx';
+
 import logo from '../../../images/logo.jpg';
 // import gitHubIcon from "../../../../images/icons/icon_github.svg";
 // import facebookIcon from "../../../../images/icons/icon_facebook.svg";
@@ -14,31 +18,10 @@ import styled from 'styled-components'; // For Original CSS each component
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-// 1. オリジナルＣＳＳ
-// const HEADER = styled.div`
-// width: 100vw;
-// background-color: black;
-// color: white;
-
-// &:hover {
-//     background-color: green;
-// }
-// `;
-
-// const HEADER__WRAP = styled.div`
-// max-width: 1080px;
-// margin: 0 auto;
-// `;
-
-// const HEADER__LOGOWRAP = style.div`
-//     display: flex;
-
-// `;
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
-import Home from '../../TSX/EachPage/Home.tsx';
-import About from '../../TSX/EachPage/About.tsx';
+
 
 // -----------------------------------------
 const reactRoot = document.getElementById('Header');
@@ -114,7 +97,7 @@ if (reactRoot) {
                   </Link>
                 </li>
                 <li className="BurgerContent__item">
-                  <Link className="BurgerContent__item--link small" to="/about">
+                  <Link className="BurgerContent__item--link small" to="/service">
                     サービス・アフターサポート
                   </Link>
                 </li>
@@ -143,7 +126,7 @@ if (reactRoot) {
             </li>
 
             <li className="navWrap__item">
-              <Link to="/about" className="navWrap__item--link">
+              <Link to="/service" className="navWrap__item--link">
                 サービス・アフターサポート
               </Link>
             </li>
@@ -179,10 +162,11 @@ if (reactRoot) {
             </li>
           </ul>
         </nav>
-        {/* pages  */}
+        {/* pages  ここで定義してLinkタグを機能させる*/}
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="about" element={<About />}></Route>
+          <Route path="service" element={<Service />}></Route>
         </Routes>
       </BrowserRouter>
     </>,
