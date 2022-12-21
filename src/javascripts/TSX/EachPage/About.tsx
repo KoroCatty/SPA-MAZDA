@@ -13,7 +13,6 @@ const About: React.FC = () => {
 
   return (
     <>
-    fasdfa
       <AboutBg />
 
       {/* <HomeBlog /> */}

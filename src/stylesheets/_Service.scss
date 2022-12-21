@@ -1,0 +1,95 @@
+@use 'reset' as *;
+@use 'setting' as *;
+
+.commonTitle.serviceList {
+  color: black;
+}
+
+.service {
+  background-color: rgb(0, 0, 0);
+
+  @media screen and (max-width: 1080px) {
+  padding: 10px;
+  }
+
+
+  &Title {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 40px 0;
+  }
+
+  &Wrap {
+    margin: 0 auto;
+    max-width: 1080px;
+  }
+
+  &Item {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+
+    &__img {
+      width: 30%;
+      height: 50%;
+    }
+
+    .wrapper {
+      width: 70%;
+      margin-left: 40px;
+    }
+
+// 2のみ width変更
+    &__info.extra {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    &__info {
+      margin-left: 40px;
+      width: 70%;
+
+      &--title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      &--title.small {
+        font-size: 0.9rem;
+
+        margin-top: 20px;
+        margin-bottom: 4px;
+      }
+
+      &--text {
+        font-size: 0.8rem;
+      }
+
+      &--text.mid {
+        font-size: 0.9rem;
+      }
+
+      &--btn {
+        margin-right: auto;
+        text-align: right;
+
+        &Link {
+           color: brown;
+           padding: 4px 10px;
+           background-color: white;
+           
+           &--arrow {
+            margin-left: 10px;
+            font-size: 0.8rem;
+           }
+        }
+      }
+
+      &--btn.BottomLine {
+        border-bottom: 1px solid rgb(255, 255, 255);
+        padding-bottom: 20px;
+    }
+  }
+  }
+}

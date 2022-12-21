@@ -1,10 +1,9 @@
 // This file goes to PageRoute.jsx
 import * as React from 'react';
 
-// import {AboutBg} from "../Components/About/AboutBg.jsx";
-// import {HomeAbout} from "../Parts/Home/HomeAbout.jsx";
-// import {HomeBlog} from "../Parts/Home/HomeBlog.jsx";
-// import {HomeRouting} from "../../../React/";
+import {ServiceList} from "../Components/Service/ServiceList.jsx";
+import {HomeAccess} from "../Components/Home/HomeAccess.jsx";
+
 
 
 
@@ -13,20 +12,10 @@ const Service: React.FC = () => {
 
   return (
     <>
-    fasdfa
-    kfasfaj
-      {/* <AboutBg /> */}
 
-      {/* <HomeBlog /> */}
-      {/* <HomeRouting /> */}
-      {/* 
-    
-    
-      <HomeProcess />
-      <HomeQuestion />
-      <HomeService />
-      <HomeWorks /> 
-      */}
+      <ServiceList />
+      <HomeAccess />
+
 
 
 
