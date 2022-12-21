@@ -14,7 +14,9 @@
 // @import "_about.scss";
 
 @use 'Service' as *;
-// @import "_about.scss";
+
+@use 'Eco' as *;
+
 
 // $breakpoints: (
 //   's': 'screen and (max-width:480px)',

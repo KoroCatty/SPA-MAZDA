@@ -6,6 +6,7 @@ import ReactDom from 'react-dom';
 import Home from '../../TSX/EachPage/Home.tsx';
 import About from '../../TSX/EachPage/About.tsx';
 import Service from '../../TSX/EachPage/Service.tsx';
+import Eco from '../../TSX/EachPage/Eco.tsx';
 
 import logo from '../../../images/logo.jpg';
 // import gitHubIcon from "../../../../images/icons/icon_github.svg";
@@ -102,7 +103,7 @@ if (reactRoot) {
                   </Link>
                 </li>
                 <li className="BurgerContent__item">
-                  <Link className="BurgerContent__item--link" to="/about">
+                  <Link className="BurgerContent__item--link" to="/Eco">
                     エコアクション
                   </Link>
                 </li>
@@ -132,7 +133,7 @@ if (reactRoot) {
             </li>
 
             <li className="navWrap__item">
-              <Link to="/about" className="navWrap__item--link">
+              <Link to="/Eco" className="navWrap__item--link">
                 エコアクション
               </Link>
             </li>
@@ -167,6 +168,7 @@ if (reactRoot) {
           <Route path="/" element={<Home />}></Route>
           <Route path="about" element={<About />}></Route>
           <Route path="service" element={<Service />}></Route>
+          <Route path="eco" element={<Eco />}></Route>
         </Routes>
       </BrowserRouter>
     </>,
