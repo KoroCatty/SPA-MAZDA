@@ -101,6 +101,8 @@
     align-items: center;
 
     &__item {
+cursor: pointer;
+
       &--link {
         color: white;
       }

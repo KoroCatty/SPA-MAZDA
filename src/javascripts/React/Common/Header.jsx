@@ -3,10 +3,12 @@
 import * as React from 'react';
 import ReactDom from 'react-dom';
 
+// 各ページ
 import Home from '../../TSX/EachPage/Home.tsx';
 import About from '../../TSX/EachPage/About.tsx';
 import Service from '../../TSX/EachPage/Service.tsx';
 import Eco from '../../TSX/EachPage/Eco.tsx';
+import Guide from '../../TSX/EachPage/Guide.tsx';
 
 import logo from '../../../images/logo.jpg';
 // import gitHubIcon from "../../../../images/icons/icon_github.svg";
@@ -139,7 +141,7 @@ if (reactRoot) {
             </li>
 
             <li className="navWrap__item">
-              <Link to="/about" className="navWrap__item--link">
+              <Link to="/guide" className="navWrap__item--link">
                 店舗案内
               </Link>
             </li>
@@ -169,6 +171,7 @@ if (reactRoot) {
           <Route path="about" element={<About />}></Route>
           <Route path="service" element={<Service />}></Route>
           <Route path="eco" element={<Eco />}></Route>
+          <Route path="guide" element={<Guide />}></Route>
         </Routes>
       </BrowserRouter>
     </>,

@@ -10,13 +10,14 @@
 @use 'Home' as *;
 // @import "_about.scss";
 
-@use 'About' as *;
+@use 'Guide' as *;
 // @import "_about.scss";
 
 @use 'Service' as *;
 
 @use 'Eco' as *;
 
+@use 'Calendar' as *;
 
 // $breakpoints: (
 //   's': 'screen and (max-width:480px)',
@@ -55,7 +56,7 @@ body {
   margin: 0;
   font-family: YakuHanMPs_Noto, 'Noto Serif JP', 游明朝, 'Yu Mincho', YuMincho,
     'Hiragino Mincho ProN', HGS明朝E, Meiryo, serif;
-    color: white;
+  color: white;
 }
 
 //----------------------------------------
@@ -68,26 +69,20 @@ body {
   font-weight: 600;
   padding: 40px 0;
 
-    @include mq(s) {
-      font-size: 32px;
-      padding-bottom: 20px;
-    }
+  @include mq(s) {
+    font-size: 32px;
+    padding-bottom: 20px;
+  }
 
-    @include mq(m) {
-      font-size: 40px;
-      padding-bottom: 40px;
-    }
+  @include mq(m) {
+    font-size: 40px;
+    padding-bottom: 40px;
+  }
 }
-
-
 
 .red {
   color: red;
 }
-
-
-
-
 
 //----------------------------------------
 // MV (main_visual)
@@ -99,25 +94,23 @@ body {
   background-image: url(../images/bg.svg);
 
   .slick-slider {
-
-  //  width: 100%;
-  //  height: 500px;
-  //  overflow-y: hidden;
+    //  width: 100%;
+    //  height: 500px;
+    //  overflow-y: hidden;
   }
-// .slick-track {
-//   width: 100vw;
-// }
+  // .slick-track {
+  //   width: 100vw;
+  // }
   .slick-slide {
     // box-sizing:border-box !important;
     // width: auto !important;
     // overflow-y: hidden;
     // overflow-x: hidden;
   }
-// .slick-list {
-//   height: 500px;
-//   width: auto !important;
-// }
-
+  // .slick-list {
+  //   height: 500px;
+  //   width: auto !important;
+  // }
 
   &Wrap {
     margin: 0 auto;
@@ -125,9 +118,9 @@ body {
     box-shadow: 1px 1px 4px white;
     padding-bottom: 0;
 
-        &:hover {
+    &:hover {
       box-shadow: 1px 1px 6px white;
-   }
+    }
 
     &__item {
       padding: 0 10px !important;
@@ -139,10 +132,10 @@ body {
       }
 
       @include mq(m) {
-      //  padding: 0 !important;
+        //  padding: 0 !important;
       }
 
-      @media screen and (max-width:1080px) {
+      @media screen and (max-width: 1080px) {
         padding: 0 !important;
       }
 
@@ -153,13 +146,12 @@ body {
         transform: translateY(4px);
 
         @include mq(s) {
-         height: 35vh;
-         transform: translateY(0);
-
+          height: 35vh;
+          transform: translateY(0);
         }
 
-        @media screen and (min-width:1800px) {
-          width: 100vw!important;
+        @media screen and (min-width: 1800px) {
+          width: 100vw !important;
           height: auto;
         }
       }
@@ -167,14 +159,13 @@ body {
       &.spOnly {
         display: none;
 
-        @media screen and (max-width:1080px) {
-         display: block;
+        @media screen and (max-width: 1080px) {
+          display: block;
         }
       }
     }
   }
 }
-
 
 // --------------------------------------------------
 // Arrow button（HomeMV内で定義しているのここで編集ができる）
@@ -183,14 +174,14 @@ body {
 .slick-prev {
   left: 25% !important;
   z-index: 1;
- display: block;
+  display: block;
   background-color: red;
 
-  @media screen and (max-width:1080px) {
+  @media screen and (max-width: 1080px) {
     left: 0 !important;
   }
 
-  &:before  {
+  &:before {
     font-size: 36px !important;
     // content: "←" !important;
   }
@@ -199,14 +190,14 @@ body {
 .slick-next {
   right: 25% !important;
   z-index: 1;
- display: block;
+  display: block;
   background-color: rgb(38, 55, 238);
 
-  @media screen and (max-width:1080px) {
+  @media screen and (max-width: 1080px) {
     right: 5% !important;
   }
 
-  &:before  {
+  &:before {
     font-size: 36px !important;
   }
 }
@@ -214,31 +205,29 @@ body {
 // Slick dots (HomeMV内でもCSS使用。ここでも編集している)
 // --------------------------------------------------
 .slick-dots {
-// background-color: red !important;
-background-image: url(../images/bg.svg);
+  // background-color: red !important;
+  background-image: url(../images/bg.svg);
 
-li {
-  width: 140px !important;
-  margin: 0 10px !important;
+  li {
+    width: 140px !important;
+    margin: 0 10px !important;
 
-  @include mq(s) {
-    width: 52px !important;
-    margin: 0;
+    @include mq(s) {
+      width: 52px !important;
+      margin: 0;
+    }
+
+    @include mq(m) {
+      width: 100px !important;
+    }
+
+    :hover {
+      background-color: rgb(20, 20, 149) !important;
+      transition: all 0.4s ease !important;
+    }
   }
-
-  @include mq(m) {
-    width: 100px !important;
-  }
-
-  :hover {
-    background-color: rgb(20, 20, 149) !important;
-    transition: all 0.4s ease !important;
-  
-  }
-}
 
   &-active {
-
     button {
       // height: 16px !important;
 
@@ -249,35 +238,31 @@ li {
   }
 }
 
-
 // --------------------------------------------------
 //  Mv Banner
 // --------------------------------------------------
 .mvBanner {
-max-width: 1080px;
-margin: 0 auto;
-justify-content: space-between;
-display: flex;
-padding: 20px 0;
+  max-width: 1080px;
+  margin: 0 auto;
+  justify-content: space-between;
+  display: flex;
+  padding: 20px 0;
 
   &__item {
-width: 260px;
+    width: 260px;
 
-// &:nth-child(2) {
-//   margin: 0 40px;
-// }
+    // &:nth-child(2) {
+    //   margin: 0 40px;
+    // }
 
     &--img {
-
     }
   }
 }
 
-
 // --------------------------------------------------
-//  News 新着情報 
+//  News 新着情報
 // --------------------------------------------------
-
 
 .news {
   background-color: rgb(28, 28, 28);
@@ -290,7 +275,6 @@ width: 260px;
       color: rgb(33, 33, 33);
       padding: 4px 12px;
       background-color: white;
-
     }
   }
 
@@ -310,7 +294,8 @@ width: 260px;
       margin: 0 auto;
     }
 
-    @include mq(m) {}
+    @include mq(m) {
+    }
   }
 
   &__row {
@@ -406,13 +391,12 @@ width: 260px;
   }
 }
 
-
 // --------------------------------------------------
 //  TOPIC
 // --------------------------------------------------
 .topic {
   background-image: url(../images/bg.svg);
-padding-bottom: 60px;
+  padding-bottom: 60px;
 
   &Wrap {
     max-width: 1080px;
@@ -456,7 +440,7 @@ padding-bottom: 60px;
 
       &--btn {
         border: 1px solid brown;
-        width: 200px; 
+        width: 200px;
         margin: 0 auto;
       }
 
@@ -464,8 +448,8 @@ padding-bottom: 60px;
         color: brown;
 
         &Icon {
-         opacity: 0.6;
-         margin-left: 10px;
+          opacity: 0.6;
+          margin-left: 10px;
         }
       }
     }
@@ -476,18 +460,17 @@ padding-bottom: 60px;
 //  Chirashi
 // --------------------------------------------------
 .chirashi {
-  color: black; 
+  color: black;
   background-color: rgb(247, 247, 247);
 
   &Title {
     text-align: center;
     font-size: 1.1rem;
     font-weight: 600;
-border-bottom: 1px solid black;
-padding-bottom: 4px;
-width: 240px;
-margin: 0 auto;
-    
+    border-bottom: 1px solid black;
+    padding-bottom: 4px;
+    width: 240px;
+    margin: 0 auto;
   }
 
   &Box {
@@ -499,7 +482,6 @@ margin: 0 auto;
     padding: 40px 0 60px 0;
 
     &__item {
-
       &.right {
         margin-left: 60px;
       }
@@ -535,17 +517,43 @@ margin: 0 auto;
     justify-content: center;
     // align-items: center;
 
-    &__logoTitle {
-
+    @include mq(s) {
+      display: block;
+    }
+    @include mq(m) {
+      display: block;
     }
 
+    // 左
+    &__logoTitle {
+      width: 30%;
+
+      @include mq(s) {
+       width: 100%;
+      }
+      @include mq(m) {
+        width: 100%;
+      }
+    }
+
+    // 右
     &__calendar {
-      margin-left: 80px;
+      width: 70%;
+      margin-left: 40px;
+
+      @include mq(s) {
+        width: 100%;
+        margin-left: 0;
+       }
+
+       @include mq(m) {
+         width: 100%;
+         margin-left: 0;
+       }
     }
   }
 
-
-// Menu ----------------------
+  // Menu ----------------------
   &Menu {
     background-color: rgb(28, 28, 28);
     padding: 40px 0;
@@ -563,7 +571,6 @@ margin: 0 auto;
       border: 1px solid white;
 
       &--img {
-
       }
 
       // 3
@@ -580,7 +587,7 @@ margin: 0 auto;
       }
     }
 
-// １、２
+    // １、２
     &__item.flex {
       display: flex;
       justify-content: center;
@@ -588,7 +595,7 @@ margin: 0 auto;
     }
   }
 
-// SNS -----------
+  // SNS -----------
   &SNS {
     background-color: rgb(28, 28, 28);
     margin: 0 auto;
@@ -596,12 +603,11 @@ margin: 0 auto;
     justify-content: center;
     padding: 40px 0 80px 0;
     border-top: 1px solid rgb(164, 164, 164);
-    
+
     &:hover {
       border-top: 1px solid rgb(255, 255, 255);
       box-shadow: 1px 1px 8px white;
-   }
-
+    }
 
     &__item {
       margin-left: 60px;
@@ -612,4 +618,3 @@ margin: 0 auto;
     // }
   }
 }
-
