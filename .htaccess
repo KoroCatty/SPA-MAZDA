@@ -1,3 +1,4 @@
+# below codes for SPA
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -11,3 +12,16 @@
 <!-- <Files ~ "\.html$">
   AddHandler fcgid-script .html
   </Files> -->
+  
+  
+  
+#   Below the codes are Basic Authentication... (password has to be 半角英語で最低一つ大文字で、暗号化されたものでないといけない)
+AuthType Basic
+AuthName "Authorization required"
+AuthUserFile /home/u496040768/domains/rk-nihongo.com/public_html/mazda/.htpasswd
+require valid-user
+<Files ~ "^.(htpasswd|htaccess)$">
+  deny from all
+</Files>
+
+
