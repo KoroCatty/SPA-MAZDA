@@ -606,7 +606,7 @@ body {
           margin-left: 0;
           margin-top: 30px;
         }
-        
+
         @include mq(m) {
           margin-left: 0;
           margin-top: 40px;
@@ -690,38 +690,43 @@ body {
       max-width: 1080px;
       display: flex;
       justify-content: space-between;
+      padding: 0 8px;
+
+      @include mq(s) { 
+        display: block;
+        text-align: center;
+      }
+    @include mq(m) { 
+    display: block;
+    text-align: center;
+
+
+      }
     }
 
     &__item {
-      width: 20%;
-      height: 100px;
-      border: 1px solid white;
+
+      @include mq(s) { 
+        margin-top: 28px;
+
+        :first-child {
+          margin-top: 0;
+        }
+      }
+    @include mq(m) { 
+      margin-top: 28px;
+
+      :first-child {
+        margin-top: 0;
+      }
+      }
 
       &--img {
       }
-
-      // 3
-      &--img.onlyImg {
-        height: 100px;
-        width: 100%;
-      }
-
-      // 4
-      &--square {
-        text-align: center;
-        margin: 40px;
-        // transform: translateY(100%);
-      }
-    }
-
-    // １、２
-    &__item.flex {
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
   }
 
+  
   // SNS -----------
   &SNS {
     background-color: rgb(28, 28, 28);

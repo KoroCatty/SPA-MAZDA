@@ -95,12 +95,12 @@ if (reactRoot) {
 
                         <div className="footerMenu__item flex">
                             <img src={footerImg1} alt="" className="footerMenu__item--img flex" />
-                            <div className="footerMenu__item--square">企業情報</div>
+                            {/* <div className="footerMenu__item--square">企業情報</div> */}
                         </div>
 
                         <div className="footerMenu__item flex">
                             <img src={footerImg2} alt="" className="footerMenu__item--img" />
-                            <div className="footerMenu__item--square">お問い合わせ</div>
+                            {/* <div className="footerMenu__item--square">お問い合わせ</div> */}
                         </div>
 
                         <div className="footerMenu__item">
