@@ -39,8 +39,8 @@ if (reactRoot) {
             </div>
 
             <div className="headerTitle">
-              <h1 className="">マツダオートザム清水</h1>
-              <p className="">MAZDA AUTOZAM SHIMIZU</p>
+              <h1 className="headerTitle__top">マツダオートザム清水</h1>
+              <p className="headerTitle__bottom">MAZDA AUTOZAM SHIMIZU</p>
             </div>
 
             <div className="headerContact">

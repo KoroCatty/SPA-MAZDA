@@ -5,6 +5,8 @@
   width: 100vw;
   background-color: rgb(28, 28, 28);
   color: white;
+  padding-top: 10px;
+  // padding-bottom: 10px;
 
   @include mq(s) {
   }
@@ -25,13 +27,54 @@
   }
 
   &Logo {
+    img {
+      @include mq(s) {
+        width: 43px;
+      }
+
+      @include mq(m) {
+        width: 80px;
+      }
+    }
   }
 
   &Title {
-    margin-left: -40%;
+    margin-left: -45%;
 
     @media screen and (max-width: 1080px) {
-      margin-left: -17%;
+      margin-left: -20%;
+      // transform: translateY(-10px);
+    }
+
+    @include mq(m) {
+      margin-left: -15%;
+      // transform: translateY(-5px);
+    }
+
+    @include mq(s) {
+      margin-left: -14%;
+      transform: translateY(-5px);
+    }
+
+    &__top {
+      font-size: 1.4rem;
+
+      @include mq(s) {
+        font-size: 0.8rem;
+      }
+      @include mq(m) {
+        font-size: 1.2rem;
+      }
+    }
+
+    &__bottom {
+      font-size: 1rem;
+
+      @include mq(s) {
+        font-size: 0.7rem;
+      }
+      @include mq(m) {
+      }
     }
   }
 
@@ -101,7 +144,7 @@
     align-items: center;
 
     &__item {
-cursor: pointer;
+      cursor: pointer;
 
       &--link {
         color: white;

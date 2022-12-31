@@ -4,6 +4,14 @@ import ReactDom from 'react-dom';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 import topic1 from '../../../../images/topic1.jpg';
+import topic2 from '../../../../images/topic2.jpg';
+import topic3 from '../../../../images/topic3.jpg';
+import topic4 from '../../../../images/topic4.jpg';
+import topic5 from '../../../../images/topic5.jpg';
+import topic6 from '../../../../images/topic6.jpg';
+import topic7 from '../../../../images/topic7.jpg';
+import topic8 from '../../../../images/topic8.jpg';
+import topic9 from '../../../../images/topic9.jpg';
 
 // // -----------------------------------------
 export const HomeTopic = () => {
@@ -29,18 +37,19 @@ export const HomeTopic = () => {
               <p className="topicWrap__card--text small">
                 一部取り扱いのない車両もございます。詳しくは店舗までお問い合わせください
               </p>
-              <div className="topicWrap__card--btn">
-                <Link className="topicWrap__card--link" to="/topic">
+              
+              <Link className="topicWrap__card--link" to="/topic">
+                <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
+                  </div>
                 </Link>
-              </div>
             </div>
           </div>
 
           <div className="topicWrap__card">
             <img
-              src={topic1}
+              src={topic2}
               alt="topic card image"
               className="topicWrap__card--img"
             />
@@ -52,18 +61,20 @@ export const HomeTopic = () => {
               <p className="topicWrap__card--text small">
                 一部取り扱いのない車両もございます。詳しくは店舗までお問い合わせください
               </p>
-              <div className="topicWrap__card--btn">
-                <Link className="topicWrap__card--link" to="/topic">
+            
+              <Link className="topicWrap__card--link" to="/topic">
+                <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
+                  </div>
                 </Link>
-              </div>
+
             </div>
           </div>
 
           <div className="topicWrap__card">
             <img
-              src={topic1}
+              src={topic3}
               alt="topic card image"
               className="topicWrap__card--img"
             />
@@ -75,12 +86,15 @@ export const HomeTopic = () => {
               <p className="topicWrap__card--text small">
                 一部取り扱いのない車両もございます。詳しくは店舗までお問い合わせください
               </p>
-              <div className="topicWrap__card--btn">
+
+        
                 <Link className="topicWrap__card--link" to="/topic">
+                <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
+                  </div>
                 </Link>
-              </div>
+           
             </div>
           </div>
 
@@ -91,7 +105,7 @@ export const HomeTopic = () => {
 
           <div className="topicWrap__card">
             <img
-              src={topic1}
+              src={topic4}
               alt="topic card image"
               className="topicWrap__card--img"
             />
@@ -103,18 +117,18 @@ export const HomeTopic = () => {
               <p className="topicWrap__card--text small">
                 一部取り扱いのない車両もございます。詳しくは店舗までお問い合わせください
               </p>
-              <div className="topicWrap__card--btn">
-                <Link className="topicWrap__card--link" to="/topic">
+              <Link className="topicWrap__card--link" to="/topic">
+                <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
+                  </div>
                 </Link>
-              </div>
             </div>
           </div>
 
           <div className="topicWrap__card">
             <img
-              src={topic1}
+              src={topic5}
               alt="topic card image"
               className="topicWrap__card--img"
             />
@@ -126,18 +140,18 @@ export const HomeTopic = () => {
               <p className="topicWrap__card--text small">
                 一部取り扱いのない車両もございます。詳しくは店舗までお問い合わせください
               </p>
-              <div className="topicWrap__card--btn">
-                <Link className="topicWrap__card--link" to="/topic">
+              <Link className="topicWrap__card--link" to="/topic">
+                <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
+                  </div>
                 </Link>
-              </div>
             </div>
           </div>
 
           <div className="topicWrap__card">
             <img
-              src={topic1}
+              src={topic6}
               alt="topic card image"
               className="topicWrap__card--img"
             />
@@ -149,12 +163,12 @@ export const HomeTopic = () => {
               <p className="topicWrap__card--text small">
                 一部取り扱いのない車両もございます。詳しくは店舗までお問い合わせください
               </p>
-              <div className="topicWrap__card--btn">
-                <Link className="topicWrap__card--link" to="/topic">
+              <Link className="topicWrap__card--link" to="/topic">
+                <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
+                  </div>
                 </Link>
-              </div>
             </div>
           </div>
 
@@ -165,7 +179,7 @@ export const HomeTopic = () => {
 
           <div className="topicWrap__card">
             <img
-              src={topic1}
+              src={topic7}
               alt="topic card image"
               className="topicWrap__card--img"
             />
@@ -177,18 +191,18 @@ export const HomeTopic = () => {
               <p className="topicWrap__card--text small">
                 一部取り扱いのない車両もございます。詳しくは店舗までお問い合わせください
               </p>
-              <div className="topicWrap__card--btn">
-                <Link className="topicWrap__card--link" to="/topic">
+              <Link className="topicWrap__card--link" to="/topic">
+                <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
+                  </div>
                 </Link>
-              </div>
             </div>
           </div>
 
           <div className="topicWrap__card">
             <img
-              src={topic1}
+              src={topic8}
               alt="topic card image"
               className="topicWrap__card--img"
             />
@@ -200,18 +214,18 @@ export const HomeTopic = () => {
               <p className="topicWrap__card--text small">
                 一部取り扱いのない車両もございます。詳しくは店舗までお問い合わせください
               </p>
-              <div className="topicWrap__card--btn">
-                <Link className="topicWrap__card--link" to="/topic">
+              <Link className="topicWrap__card--link" to="/topic">
+                <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
+                  </div>
                 </Link>
-              </div>
             </div>
           </div>
 
           <div className="topicWrap__card">
             <img
-              src={topic1}
+              src={topic9}
               alt="topic card image"
               className="topicWrap__card--img"
             />
@@ -223,12 +237,12 @@ export const HomeTopic = () => {
               <p className="topicWrap__card--text small">
                 一部取り扱いのない車両もございます。詳しくは店舗までお問い合わせください
               </p>
-              <div className="topicWrap__card--btn">
-                <Link className="topicWrap__card--link" to="/topic">
+              <Link className="topicWrap__card--link" to="/topic">
+                <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
+                  </div>
                 </Link>
-              </div>
             </div>
           </div>
 

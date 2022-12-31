@@ -2,13 +2,21 @@ import * as React from "react";
 import ReactDom from 'react-dom';
 
 
-import footer_icon from "../../../images/footer_img.jpg";
-import footer_icon2 from "../../../images/guide1.jpg";
+// import footer_icon from "../../../images/footer_img.jpg";
+// import footer_icon2 from "../../../images/guide1.jpg";
+
+
 import sns_insta from "../../../images/sns_insta.svg";
 import sns_line from "../../../images/sns_line.svg";
 
 
-// import logo from "../../../../images/top_k_logo.png";
+import logo from "../../../images/logo.png";
+
+import footerImg1 from "../../../images/footerImg1.png";
+import footerImg2 from "../../../images/footerImg2.png";
+import footerImg3 from "../../../images/footerImg3.png";
+import footerImg4 from "../../../images/footerImg4.png";
+
 // import gitHubIcon from "../../../../images/icons/icon_github.svg";
 // import facebookIcon from "../../../../images/icons/icon_facebook.svg";
 // import youtubeIcon from "../../../../images/icons/icon_youtube.svg";
@@ -52,7 +60,7 @@ if (reactRoot) {
                     <div className="footerInfo">
 
                         <div className="footerInfo__logoTitle">
-                            <img src="" alt="" className="footerInfo__logoTitle--img" />
+                            <img src={logo} alt="" className="footerInfo__logoTitle--img" />
                             <div className="footerInfo__logoTitle--text">マツダオートザム
                                 <p className="footerInfo__logoTitle--text small">
                                     MAZDA AUTOZAM SHIMIZU
@@ -86,21 +94,22 @@ if (reactRoot) {
                     <div className="footerMenu__wrap">
 
                         <div className="footerMenu__item flex">
-                            <img src={footer_icon} alt="" className="footerMenu__item--img flex" />
+                            <img src={footerImg1} alt="" className="footerMenu__item--img flex" />
                             <div className="footerMenu__item--square">企業情報</div>
                         </div>
 
                         <div className="footerMenu__item flex">
-                            <img src={footer_icon} alt="" className="footerMenu__item--img" />
+                            <img src={footerImg2} alt="" className="footerMenu__item--img" />
                             <div className="footerMenu__item--square">お問い合わせ</div>
                         </div>
 
                         <div className="footerMenu__item">
-                            <img src={footer_icon2} alt="" className="footerMenu__item--img onlyImg" />
+                            <img src={footerImg3} alt="" className="footerMenu__item--img onlyImg" />
                         </div>
 
                         <div className="footerMenu__item">
-                            <div className="footerMenu__item--square">所有権解除</div>
+                            {/* <div className="footerMenu__item--square">所有権解除</div> */}
+                            <img src={footerImg4} alt="" className="footerMenu__item--img onlyImg" />
                         </div>
 
                     </div>
