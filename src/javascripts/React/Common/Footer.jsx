@@ -31,7 +31,6 @@ const CONTACT = styled.div`
     border-top: 1px solid rgb(255, 255, 255);
     box-shadow: 1px 1px 8px white;
  }
-
 `;
 
 const CP = styled.div`

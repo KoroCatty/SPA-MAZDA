@@ -10,7 +10,7 @@ import Service from '../../TSX/EachPage/Service.tsx';
 import Eco from '../../TSX/EachPage/Eco.tsx';
 import Guide from '../../TSX/EachPage/Guide.tsx';
 
-import logo from '../../../images/logo.jpg';
+import logo from '../../../images/logo.png';
 // import gitHubIcon from "../../../../images/icons/icon_github.svg";
 // import facebookIcon from "../../../../images/icons/icon_facebook.svg";
 // import youtubeIcon from "../../../../images/icons/icon_youtube.svg";

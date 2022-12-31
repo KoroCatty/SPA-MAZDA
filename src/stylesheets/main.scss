@@ -19,25 +19,6 @@
 
 @use 'Calendar' as *;
 
-// $breakpoints: (
-//   's': 'screen and (max-width:480px)',
-//   'm': 'screen and (max-width: 767px) and (min-width:480px)',
-//   // 'l': 'screen and (max-width: 1080px) and (min-width: 768px)',
-//   'l': 'screen and (max-width: 1079px) and (min-width: 767px)',
-//   'xl': 'screen and (min-width: 1080px) ',
-// ) !default;
-
-// @mixin mq($breakpoint: md) {
-//   @media #{map-get($breakpoints, $breakpoint)} {
-//     @content;
-//   }
-// }
-
-// Tailwind CSS
-// @import "~tailwindcss/base";
-// @import "~tailwindcss/components";
-// @import "~tailwindcss/utilities";
-
 // Dark MOde
 // @media (prefers-color-scheme: dark) {
 //   body {
@@ -54,8 +35,7 @@ body {
   overflow: hidden auto; // To prevent scroll horizontally
   // width: calc(100vw - 10px);
   margin: 0;
-  font-family: YakuHanMPs_Noto, 'Noto Serif JP', 游明朝, 'Yu Mincho', YuMincho,
-    'Hiragino Mincho ProN', HGS明朝E, Meiryo, serif;
+  font-family: $ff;
   color: white;
 }
 

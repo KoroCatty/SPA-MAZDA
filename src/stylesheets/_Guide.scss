@@ -1,6 +1,121 @@
-@use "setting" as *;
-@use "_reset" as *;
+@use 'setting' as *;
+@use '_reset' as *;
 
 .guide {
-    color: black;
+  color: white;
+  background-color: black;
+  padding: 60px 0;
+
+  &Title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &Info {
+    max-width: 1080px;
+    margin: 0 auto;
+
+    &__wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__wrap.reverse {
+      flex-direction: row-reverse;
+      margin-top: 80px;
+    }
+
+    &__wrapItem {
+      width: 70%;
+      margin-left: 8px;
+
+      &--img {
+      }
+
+      &--title {
+        font-size: 27px;
+        margin-top: 4px;
+        margin-bottom: 12px;
+      }
+
+      &--flex {
+        display: flex;
+        align-items: center;
+      }
+
+      &--left {
+        border: 1px solid rgb(207, 207, 207);
+        border-radius: 3px;
+        width: 90px;
+        text-align: center;
+        margin: 12px 0;
+        font-size: 0.85rem;
+      }
+
+      &--right {
+        margin-left: 20px;
+        font-size: 1rem;
+      }
+    }
+
+    &__wrapItem.mg_right {
+      margin-right: 2vw;
+    }
+
+    &__wrapItem--text {
+      font-size: 1rem;
+      line-height: 1.9;
+
+      &--narrow {
+        letter-spacing: -0.5px;
+      }
+    }
+  }
+}
+
+//----------------------------------------
+// GuideCampaign
+//----------------------------------------
+.GuideCamp {
+  background-color: white;
+  color: black;
+  margin: 100px 0;
+
+  &__title {
+    text-align: center;
+    font-size: 1.55rem;
+    margin-bottom: 80px;
+  }
+
+  &__wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    &Item {
+      width: 47%;
+
+      &--img {
+      }
+
+      &--title {
+        font-size: 1.5rem;
+        margin-left: 6px;
+      }
+
+      &--caption {
+        font-size: 1rem;
+        margin-left: 8px;
+      }
+    }
+
+    &Item:first-child {
+      margin-right: 60px;
+    }
+  }
+
+  &__wrap:last-child {
+    margin-top: 80px;
+  }
 }

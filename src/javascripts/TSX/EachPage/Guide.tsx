@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import {GuideInfo} from "../Components/Guide/GuideInfo.jsx";
 import {GuideCamp} from "../Components/Guide/GuideCampaign.jsx";
-// import {HomeAccess} from "../Components/Home/HomeAccess.jsx";
+import {HomeAccess} from "../Components/Home/HomeAccess.jsx";
 
 
 
@@ -15,6 +15,7 @@ const Guide: React.FC = () => {
     <>
       <GuideInfo />
       <GuideCamp />
+      <HomeAccess />
     </>
   );
 
