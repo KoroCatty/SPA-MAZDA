@@ -228,14 +228,44 @@ body {
   display: flex;
   padding: 20px 0;
 
-  &__item {
-    width: 260px;
+  @include mq(s) { 
+    display: block;
+  }
+@include mq(m) { 
+// display: block;
+  }
 
-    // &:nth-child(2) {
-    //   margin: 0 40px;
-    // }
+  &__item {
+    
+    @include mq(s) { 
+      margin: 20px 0; 
+    }
+
+    &:nth-child(2) {
+      margin: 0 8px;
+
+      @include mq(s) { 
+        margin: 20px 0; 
+      }
+    }
+
+    @include mq(s) { 
+      text-align: center;
+    }
+  @include mq(m) { 
+
+    }
 
     &--img {
+
+      @include mq(s) { 
+   
+      }
+    @include mq(m) { 
+      }
+    }
+
+    &--link {
     }
   }
 }
@@ -248,13 +278,33 @@ body {
   background-color: rgb(28, 28, 28);
   padding-bottom: 80px;
 
+  @include mq(m) {
+    padding: 0 6px;
+  }
+
+  @include mq(s) {
+padding: 0 12px;
+  }
+
   &Btn {
-    text-align: right;
 
     &__link {
-      color: rgb(33, 33, 33);
+      color: rgb(98, 98, 98);
       padding: 4px 12px;
       background-color: white;
+      width: 160px;
+      text-align: center;
+      display: block;
+      margin-left: auto;
+      margin-bottom: 28px;
+      border-radius: 2px;
+      box-shadow: 1px 0 4px white;
+
+      span {
+        font-size: 0.9rem;
+        margin-left: 20px;
+        color: rgb(98, 98, 98);
+      }
     }
   }
 
@@ -264,8 +314,8 @@ body {
   }
 
   &__wrap {
-    border-top: 3px solid rgb(218, 210, 75);
-    border-bottom: 3px solid rgb(218, 210, 75);
+    border-top: 1.5px solid rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(255, 255, 255);
     height: 380px;
     overflow-y: scroll;
 
@@ -280,6 +330,7 @@ body {
 
   &__row {
     display: flex;
+    justify-content:space-between;
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px dotted rgb(104, 104, 104);
@@ -296,24 +347,41 @@ body {
       margin-top: 0;
       box-sizing: content-box;
     }
+
+    // Always being flex for these
+    &.DateHeading {
+      display: flex;
+      justify-content:flex-start;
+      border-bottom: none;
+
+    }
   }
 
   &__date {
-    font-size: 18px;
-    margin-left: 20px;
+    font-size: 0.9rem;
     color: white;
+
+    @include mq(m) {
+      margin-left: 20px;
+    }
+
+    @include mq(s) {
+      margin-left: 20px;
+    }
   }
 
   &__heading {
-    width: 80px;
+    width: 100px;
     color: black;
-    margin: 0 40px;
+    // margin: 0 40px;
     padding: 4px 6px;
     background: white;
     font-weight: 700;
-    border-radius: 10px;
+    font-size: 0.8rem;
+    border-radius: 2px;
     text-align: center;
     letter-spacing: -1px;
+ margin: 0 20px;
 
     @include mq(s) {
       margin-left: 20px;
@@ -326,33 +394,34 @@ body {
     }
   }
 
-  &__heading--important {
-    width: 80px;
-    color: white;
-    letter-spacing: 4px;
-    font-weight: 700;
-    margin: 0 40px;
-    padding: 4px 6px;
-    background: rgb(189, 54, 54);
-    border-radius: 10px;
-    text-align: center;
+  // &__heading--important {
+  //   width: 80px;
+  //   color: white;
+  //   letter-spacing: 4px;
+  //   font-weight: 700;
+  //   margin: 0 40px;
+  //   padding: 4px 6px;
+  //   background: rgb(189, 54, 54);
+  //   border-radius: 10px;
+  //   text-align: center;
 
-    @include mq(s) {
-      margin-left: 20px;
-      margin: 8px 20px;
-    }
+  //   @include mq(s) {
+  //     margin-left: 20px;
+  //     margin: 8px 20px;
+  //   }
 
-    @include mq(m) {
-      margin-left: 20px;
-      margin: 8px 20px;
-    }
-  }
+  //   @include mq(m) {
+  //     margin-left: 20px;
+  //     margin: 8px 20px;
+  //   }
+  // }
 
   &__text {
     font-weight: 600;
     color: white;
     line-height: 20px;
     margin-right: 12px;
+    width:74%;
 
     @include mq(s) {
       margin-left: 20px;
@@ -367,6 +436,19 @@ body {
       text-shadow: 0px 1px 1px rgb(79, 23, 23);
       font-weight: 900;
       font-size: 20px;
+    }
+  }
+
+  &__arrow {
+    margin-right: 8px;
+    font-weight: 900;
+    font-size: 1rem;
+
+    @include mq(m) {
+      display: none;
+    }
+    @include mq(s) {
+      display: none;
     }
   }
 }

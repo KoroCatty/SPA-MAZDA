@@ -9,12 +9,12 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 
 import HomeMv1 from "../../../../images/mv1.jpg";
-// import HomeMv2 from "../../../../images/mv2.jpg";
-// import HomeMv3 from "../../../../images/mv3.jpg";
+import HomeMv2 from "../../../../images/mv2.jpg";
+import HomeMv3 from "../../../../images/mv3.jpg";
 
 import mvBanner1 from "../../../../images/banner1.svg";
 import mvBanner2 from "../../../../images/banner2.svg";
-// import mvBanner3 from "../../../../images/banner3.svg";
+import mvBanner3 from "../../../../images/banner3.jpg";
 
 
 
@@ -155,31 +155,31 @@ export const HomeMV = (props) => {
             <img src={HomeMv1} alt="" className="mvWrap__item--img" />
           </div>
           <div className="mvWrap__item">
-            <img src={HomeMv1} alt="" className="mvWrap__item--img" />
+            <img src={HomeMv2} alt="" className="mvWrap__item--img" />
           </div>
           <div className="mvWrap__item">
             <img src={HomeMv1} alt="" className="mvWrap__item--img" />
           </div>
           <div className="mvWrap__item spOnly">
-            <img src={HomeMv1} alt="" className="mvWrap__item--img" />
+            <img src={HomeMv3} alt="" className="mvWrap__item--img" />
           </div>
         </Slider>
 
 
         <div className="mvBanner">
           <div className="mvBanner__item">
-             <Link className="--link" to="/YouTube">
+             <Link className="mvBanner__item--link" to="/YouTube">
               <img src={mvBanner1} alt="" className="mvBanner__item--img" />
            </Link>
           </div>
           <div className="mvBanner__item">
-             <Link className="--link" to="/Blog">
+             <Link className="mvBanner__item--link" to="/Blog">
               <img src={mvBanner2} alt="" className="mvBanner__item--img" />
            </Link>
           </div>
           <div className="mvBanner__item">
-             <Link className="--link" to="/Recruit">
-              <img src={mvBanner2} alt="" className="mvBanner__item--img" />
+             <Link className="mvBanner__item--link" to="/Recruit">
+              <img src={mvBanner3} alt="" className="mvBanner__item--img" />
            </Link>
           </div>
         </div>
