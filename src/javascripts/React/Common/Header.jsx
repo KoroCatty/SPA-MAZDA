@@ -24,7 +24,17 @@ import { useEffect } from 'react';
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
+// <Link>タグが押されたらページトップに移動
+function ChangePageTop() {
+  window.scroll(0, 0); // ページの一番上に移動
+}
 
+function aaa() {
+  const bbb = document.querySelector('.BurgerContent');
+  // const ccc = document.querySelector('.');
+  bbb.classList.add("js");
+  // ccc.classList.add("js");
+}
 
 // -----------------------------------------
 const reactRoot = document.getElementById('Header');
@@ -32,6 +42,7 @@ if (reactRoot) {
   ReactDom.render(
     <>
       <BrowserRouter>
+      {/*  */}
       {/* FooterのTopへ戻るボタンでこのidまで飛んでくる */}
         <header className="header" id="scroll__top">
           <div className="headerWrap">
@@ -96,22 +107,25 @@ if (reactRoot) {
                   <img src={logo} alt="" className="BurgerContent__item--img" />
                 </li>
                 <li className="BurgerContent__item">
-                  <Link className="BurgerContent__item--link" to="/">
+                  <Link className="BurgerContent__item--link" to="/" onClick={ ()=> {
+                    ChangePageTop();
+                    aaa();
+                  }} >
                     HOME
                   </Link>
                 </li>
                 <li className="BurgerContent__item">
-                  <Link className="BurgerContent__item--link small" to="/service">
+                  <Link className="BurgerContent__item--link small" to="/service" onClick={ChangePageTop}>
                     サービス・アフターサポート
                   </Link>
                 </li>
                 <li className="BurgerContent__item">
-                  <Link className="BurgerContent__item--link" to="/Eco">
+                  <Link className="BurgerContent__item--link" to="/Eco" onClick={ChangePageTop}>
                     エコアクション
                   </Link>
                 </li>
                 <li className="BurgerContent__item">
-                  <Link className="BurgerContent__item--link" to="/about">
+                  <Link className="BurgerContent__item--link" to="/guide" onClick={ChangePageTop}>
                     店舗案内
                   </Link>
                 </li>

@@ -51,6 +51,15 @@ const CP = styled.div`
  padding: 16px;
 `;
 
+// トップへ戻るホバー効果
+const GoToTopHoverCSS = styled.div`
+    &:hover {
+        /* background-color:white;
+        color: black; */
+        transition: all 0.4s ease;
+        opacity: 0.4;
+    }
+`
 
 
 
@@ -152,27 +161,34 @@ if (reactRoot) {
                 <div className="footerContact">
                     <h3 className="footerContact__email">Email: kojima.website@gmail.com</h3>
                     <p className="">Made by React</p>
+                </div>
 
-                    {/* Go to Top */}
+
+                <CP>
+                    <p>©2022 RK-WEB-DESIGN | All Rights Reserved. </p>
+                </CP>
+
+                         {/* Go to Top */}
+                         <GoToTopHoverCSS>
+                         <div>
                         <Scroll to="scroll__top" smooth={true}
                             duration={200} offset={-30}
-                            style={{ 
-                                color: "gold", 
-                                fontSize: "2rem", 
-                                // backgroundColor: "white", 
-                            
+                            style={{
+                                color: "white",
+                                fontSize: "1.2rem",
+                                borderTop: "1px solid #777777",
+                                width: "100%",
+                                display: "block",
+                                padding: "10px 0",
+                                cursor: "pointer",
                             }}
-                            >
-                            Go To Top
+                        >
+                            トップに戻る
                         </Scroll>
-                </div>
-       
+                    </div>
+                    </GoToTopHoverCSS>
 
-            <CP>
-                <p>©2022 RK-WEB-DESIGN | All Rights Reserved. </p>
-            </CP>
-
-        </CONTACT>
+            </CONTACT>
 
 
 

@@ -258,7 +258,7 @@
   // background: rgb(0, 0, 0); /*背景色*/
   background: linear-gradient(
     127deg,
-    rgba(2, 0, 36, 1) 0%,
+    rgb(3, 3, 7) 0%,
     rgb(31, 31, 31) 45%,
     rgba(147, 147, 147, 1) 100%
   );
@@ -296,3 +296,11 @@
     }
   }
 }
+
+
+.BurgerContent.js {
+  display: none;
+}
+// .nav-closed.js {
+//   display: none;
+// }
