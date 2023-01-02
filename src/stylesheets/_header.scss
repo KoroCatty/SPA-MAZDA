@@ -7,9 +7,8 @@
   color: white;
   padding-top: 10px;
 
-
   @include mq(s) {
-    padding-bottom: 10px;
+    // padding-bottom: 10px;
   }
   @include mq(m) {
   }
@@ -28,7 +27,6 @@
   }
 
   &Logo {
-
     @media screen and (max-width: 1080px) {
       margin-left: -10%;
     }
@@ -42,7 +40,7 @@
 
     img {
       @include mq(s) {
-        width: 43px;
+        width: 60px;
       }
 
       @include mq(m) {
@@ -184,7 +182,7 @@
   }
 
   &__input {
-    /*チェックが入ったらもろもろ表示*/
+    /* inputにチェックが入ったらもろもろ表示*/
     &:checked ~ #nav-close {
       display: block; /*カバーを表示*/
       opacity: 0.5;
@@ -297,10 +295,19 @@
   }
 }
 
-
-.BurgerContent.js {
-  display: none;
+// JS control //////////////////
+/*ハンバーガーアイコンをCSSだけで表現*/
+.BurgerIcon.disappear{
+  transform: rotate(45deg);
+  transition: all 0.2s ;
+  margin-top: 8px;
 }
-// .nav-closed.js {
-//   display: none;
-// }
+.BurgerIcon.disappear:before {
+  display: none !important;
+}
+.BurgerIcon.disappear:after {
+  transform: rotate(92deg);
+  transition: all 0.2s ;
+  top: 0;
+  left: 0;
+}

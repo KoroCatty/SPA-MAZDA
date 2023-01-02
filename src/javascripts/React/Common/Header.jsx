@@ -29,11 +29,26 @@ function ChangePageTop() {
   window.scroll(0, 0); // ページの一番上に移動
 }
 
-function aaa() {
-  const bbb = document.querySelector('.BurgerContent');
-  // const ccc = document.querySelector('.');
-  bbb.classList.add("js");
-  // ccc.classList.add("js");
+// Close burger menu when you press button
+function CloseBurger() {
+  const ccc = document.querySelector('#nav-close');
+  const ddd = document.querySelector('.nav-unshown');
+  const fff = document.querySelector('.navDrawer__input:checked ~ .BurgerContent');
+
+  // input内の checkedをfalseに変える
+  ccc.checked = false;
+  ddd.checked = false;
+  fff.checked = false;
+
+  // Change burger Icon shape
+  const Burger = document.querySelector('.BurgerIcon');
+  Burger.classList.toggle("disappear");
+}
+
+  // Change burger Icon shape function
+function ChangeShape() {
+  const Burger = document.querySelector('.BurgerIcon');
+  Burger.classList.toggle("disappear");
 }
 
 // -----------------------------------------
@@ -88,8 +103,8 @@ if (reactRoot) {
               />
 
               {/* <!-- これはバーガーを作るもの。 ここにnav-inputがあり上のinputとシンクロナイズする--> */}
-              <label id="nav-open" htmlFor="nav-input">
-                <span></span>
+              <label id="nav-open" htmlFor="nav-input" onClick={ChangeShape}>
+                <span className='BurgerIcon'></span>
               </label>
 
               {/* <!-- ここにもnav-inputがあり、上のinputとシンクロナイズする。nav-closeに黒幕を貼ってる -->
@@ -98,6 +113,7 @@ if (reactRoot) {
                 className="nav-unshown"
                 id="nav-close"
                 htmlFor="nav-input"
+                onClick={ChangeShape}
               ></label>
 
               {/*---------- Hamburger 中身 -------------*/}
@@ -107,25 +123,42 @@ if (reactRoot) {
                   <img src={logo} alt="" className="BurgerContent__item--img" />
                 </li>
                 <li className="BurgerContent__item">
-                  <Link className="BurgerContent__item--link" to="/" onClick={ ()=> {
+                  <Link className="BurgerContent__item--link" to="/" 
+                  onClick={ ()=> {
                     ChangePageTop();
-                    aaa();
-                  }} >
+                    CloseBurger();
+                  }}
+                   >
                     HOME
                   </Link>
                 </li>
                 <li className="BurgerContent__item">
-                  <Link className="BurgerContent__item--link small" to="/service" onClick={ChangePageTop}>
+                  <Link className="BurgerContent__item--link small" to="/service" 
+                   onClick={ ()=> {
+                    ChangePageTop();
+                    CloseBurger();
+                  }}
+                  >
                     サービス・アフターサポート
                   </Link>
                 </li>
                 <li className="BurgerContent__item">
-                  <Link className="BurgerContent__item--link" to="/Eco" onClick={ChangePageTop}>
+                  <Link className="BurgerContent__item--link" to="/Eco" 
+                   onClick={ ()=> {
+                    ChangePageTop();
+                    CloseBurger();
+                  }}
+                  >
                     エコアクション
                   </Link>
                 </li>
                 <li className="BurgerContent__item">
-                  <Link className="BurgerContent__item--link" to="/guide" onClick={ChangePageTop}>
+                  <Link className="BurgerContent__item--link" to="/guide" 
+                   onClick={ ()=> {
+                    ChangePageTop();
+                    CloseBurger();
+                  }}
+                  >
                     店舗案内
                   </Link>
                 </li>

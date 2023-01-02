@@ -175,7 +175,7 @@ if (reactRoot) {
                             duration={200} offset={-30}
                             style={{
                                 color: "white",
-                                fontSize: "1.2rem",
+                                fontSize: "1rem",
                                 borderTop: "1px solid #777777",
                                 width: "100%",
                                 display: "block",

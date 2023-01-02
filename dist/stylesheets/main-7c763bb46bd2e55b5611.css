@@ -222,10 +222,23 @@ select {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  .headerLogo {
+    margin-left: -10%;
+  }
+}
+@media screen and (max-width:480px) {
+  .headerLogo {
+    margin-left: -30px;
+  }
+}
+@media screen and (max-width: 767px) and (min-width:480px) {
+  .headerLogo {
+    margin-left: -10%;
+  }
 }
 @media screen and (max-width:480px) {
   .headerLogo img {
-    width: 43px;
+    width: 60px;
   }
 }
 @media screen and (max-width: 767px) and (min-width:480px) {
@@ -243,7 +256,7 @@ select {
 }
 @media screen and (max-width: 767px) and (min-width:480px) {
   .headerTitle {
-    margin-left: -15%;
+    margin-left: -18%;
   }
 }
 @media screen and (max-width:480px) {
@@ -367,7 +380,7 @@ select {
   }
 }
 .navDrawer__input {
-  /*チェックが入ったらもろもろ表示*/
+  /* inputにチェックが入ったらもろもろ表示*/
 }
 .navDrawer__input:checked ~ #nav-close {
   display: block; /*カバーを表示*/
@@ -433,7 +446,7 @@ select {
   width: 90%; /*右側に隙間を作る*/
   max-width: 330px; /*最大幅*/
   height: 100%;
-  background: linear-gradient(127deg, rgb(2, 0, 36) 0%, rgb(31, 31, 31) 45%, rgb(147, 147, 147) 100%);
+  background: linear-gradient(127deg, rgb(3, 3, 7) 0%, rgb(31, 31, 31) 45%, rgb(147, 147, 147) 100%);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out; /*滑らかに表示*/
   -webkit-transform: translateX(-105%);
@@ -466,6 +479,25 @@ select {
   .BurgerContent__item--link.small {
     font-size: 0.9rem;
   }
+}
+/*ハンバーガーアイコンをCSSだけで表現*/
+.BurgerIcon.disappear {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin-top: 8px;
+}
+.BurgerIcon.disappear:before {
+  display: none !important;
+}
+.BurgerIcon.disappear:after {
+  -webkit-transform: rotate(92deg);
+          transform: rotate(92deg);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  top: 0;
+  left: 0;
 }
 .guide {
   color: white;
@@ -605,11 +637,13 @@ select {
 @media screen and (max-width:480px) {
   .serviceItem {
     display: block;
+    padding-bottom: 80px;
   }
 }
 @media screen and (max-width: 767px) and (min-width:480px) {
   .serviceItem {
     display: block;
+    padding-bottom: 80px;
   }
 }
 .serviceItem__img {
@@ -630,6 +664,18 @@ select {
   width: 70%;
   margin-left: 40px;
 }
+@media screen and (max-width:480px) {
+  .serviceItem .wrapper {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 767px) and (min-width:480px) {
+  .serviceItem .wrapper {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
 .serviceItem__info.extra {
   width: 100%;
   margin-left: 0;
@@ -638,17 +684,61 @@ select {
   margin-left: 40px;
   width: 70%;
 }
+@media screen and (max-width:480px) {
+  .serviceItem__info {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 767px) and (min-width:480px) {
+  .serviceItem__info {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 .serviceItem__info--title {
   font-size: 1.2rem;
   margin-bottom: 10px;
+}
+@media screen and (max-width:480px) {
+  .serviceItem__info--title {
+    margin-top: 28px;
+    margin-bottom: 18px;
+  }
+}
+@media screen and (max-width: 767px) and (min-width:480px) {
+  .serviceItem__info--title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
 }
 .serviceItem__info--title.small {
   font-size: 0.9rem;
   margin-top: 20px;
   margin-bottom: 4px;
 }
+@media screen and (max-width:480px) {
+  .serviceItem__info--title.small {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 767px) and (min-width:480px) {
+  .serviceItem__info--title.small {
+    font-size: 1.2rem;
+  }
+}
 .serviceItem__info--text {
   font-size: 0.8rem;
+}
+@media screen and (max-width:480px) {
+  .serviceItem__info--text {
+    font-size: 0.95rem;
+  }
+}
+@media screen and (max-width: 767px) and (min-width:480px) {
+  .serviceItem__info--text {
+    font-size: 1.1rem;
+  }
 }
 .serviceItem__info--text.mid {
   font-size: 0.9rem;
@@ -656,11 +746,35 @@ select {
 .serviceItem__info--btn {
   margin-right: auto;
   text-align: right;
+  margin-top: 40px;
+}
+@media screen and (max-width:480px) {
+  .serviceItem__info--btn {
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 767px) and (min-width:480px) {
+  .serviceItem__info--btn {
+    text-align: center;
+    margin-top: 40px;
+  }
 }
 .serviceItem__info--btnLink {
-  color: brown;
+  color: #999999;
   padding: 4px 10px;
   background-color: white;
+  border-radius: 3px;
+}
+@media screen and (max-width:480px) {
+  .serviceItem__info--btnLink {
+    padding: 8px 60px;
+  }
+}
+@media screen and (max-width: 767px) and (min-width:480px) {
+  .serviceItem__info--btnLink {
+    padding: 8px 60px;
+  }
 }
 .serviceItem__info--btnLink--arrow {
   margin-left: 10px;
@@ -670,6 +784,16 @@ select {
   border-bottom: 1px solid rgb(255, 255, 255);
   padding-bottom: 20px;
 }
+@media screen and (max-width:480px) {
+  .serviceItem__info--btn.BottomLine {
+    padding-bottom: 40px;
+  }
+}
+@media screen and (max-width: 767px) and (min-width:480px) {
+  .serviceItem__info--btn.BottomLine {
+    padding-bottom: 40px;
+  }
+}
 .ecoTitle {
   background-image: url(/images/bg-1a3a9aec34881ff56b5b.svg);
 }
@@ -678,9 +802,10 @@ select {
   background-color: white;
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 8px;
 }
 .ecoFirst {
-  max-width: 540px;
+  max-width: 640px;
   margin: 0 auto;
 }
 .ecoTitle--small {
@@ -689,10 +814,27 @@ select {
   text-align: center;
   padding: 60px 0 40px 0;
 }
+@media screen and (max-width:480px) {
+  .ecoTitle--small {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 767px) and (min-width:480px) {
+  .ecoTitle--small {
+    font-size: 1.8rem;
+  }
+}
 .ecoText {
   text-align: center;
-  font-weight: 600;
   margin: 60px 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.8;
+}
+@media screen and (max-width:480px) {
+  .ecoText {
+    margin: 40px 0;
+  }
 }
 .ecoPolicy {
   font-size: 1.2rem;
@@ -712,6 +854,22 @@ select {
 .ecoSecond {
   max-width: 600px;
   margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+@media screen and (max-width:480px) {
+  .ecoSecond {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+}
+.ecoSecond__text {
+  margin: 40px 0;
+}
+@media screen and (max-width:480px) {
+  .ecoSecond__text {
+    margin: 30px 0;
+  }
 }
 .ecoBiz {
   font-size: 1rem;
@@ -725,10 +883,26 @@ select {
 .ecoThird {
   max-width: 540px;
   margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+@media screen and (max-width:480px) {
+  .ecoThird {
+    font-size: 1.1rem;
+  }
+}
+.ecoThird__text {
+  margin-bottom: 30px;
 }
 .ecoSignature {
   text-align: center;
   padding: 60px 0;
+  font-size: 1rem;
+}
+@media screen and (max-width:480px) {
+  .ecoSignature {
+    font-size: 0.95rem;
+  }
 }
 .ecoSignature__btn {
   margin-top: 40px;
@@ -1518,6 +1692,11 @@ body {
 .footerSNS__item {
   margin-left: 60px;
   text-align: center;
+}
+@media screen and (max-width:480px) {
+  .footerSNS__item:first-child {
+    margin-left: 0;
+  }
 }
 /* Slider */
 .slick-slider {
