@@ -10,9 +10,10 @@
   background-color: white;
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 8px;
 
   &First {
-    max-width: 540px;
+    max-width: 640px;
     margin: 0 auto;
   }
 
@@ -21,6 +22,13 @@
     font-weight: 600;
     text-align: center;
     padding: 60px 0 40px 0;
+
+    @include mq(s) {
+      font-size: 1.2rem;
+    }
+    @include mq(m) {
+      font-size: 1.8rem;
+    }
   }
 
   &Img {
@@ -28,8 +36,18 @@
 
   &Text {
     text-align: center;
-    font-weight: 600;
+    // font-weight: 600;
     margin: 60px 0;
+
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.8;
+
+    @include mq(s) {
+      margin: 40px 0;
+    }
+    @include mq(m) {
+    }
   }
 
   &Policy {
@@ -52,6 +70,23 @@
   &Second {
     max-width: 600px;
     margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+
+    @include mq(s) {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    @include mq(m) {
+    }
+
+    &__text {
+      margin: 40px 0;
+
+      @include mq(s) {
+    margin: 30px 0;
+      }
+    }
   }
 
   &Biz {
@@ -67,11 +102,22 @@
   &Third {
     max-width: 540px;
     margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+
+    @include mq(s) {
+      font-size: 1.1rem;
+        }
   }
 
   &Signature {
     text-align: center;
     padding: 60px 0;
+    font-size: 1rem;
+
+    @include mq(s) {
+      font-size: 0.95rem;
+        }
 
     &__btn {
       margin-top: 40px;

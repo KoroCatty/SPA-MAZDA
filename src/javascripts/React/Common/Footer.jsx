@@ -2,8 +2,10 @@ import * as React from "react";
 import ReactDom from 'react-dom';
 
 
-// import footer_icon from "../../../images/footer_img.jpg";
-// import footer_icon2 from "../../../images/guide1.jpg";
+// 3rd Party 
+// import * as Scroll from 'react-scroll';
+import { Link as Scroll } from "react-scroll"; // 3rd party
+
 
 
 import sns_insta from "../../../images/sns_insta.svg";
@@ -48,6 +50,9 @@ const CP = styled.div`
  text-align: center;
  padding: 16px;
 `;
+
+
+
 
 // -----------------------------------------
 const reactRoot = document.getElementById('Footer');
@@ -147,13 +152,27 @@ if (reactRoot) {
                 <div className="footerContact">
                     <h3 className="footerContact__email">Email: kojima.website@gmail.com</h3>
                     <p className="">Made by React</p>
+
+                    {/* Go to Top */}
+                        <Scroll to="scroll__top" smooth={true}
+                            duration={200} offset={-30}
+                            style={{ 
+                                color: "gold", 
+                                fontSize: "2rem", 
+                                // backgroundColor: "white", 
+                            
+                            }}
+                            >
+                            Go To Top
+                        </Scroll>
                 </div>
+       
 
-                <CP>
-                    <p>Copyright ©2022 RK-WEB-DESIGN | All Rights Reserved. </p>
-                </CP>
+            <CP>
+                <p>©2022 RK-WEB-DESIGN | All Rights Reserved. </p>
+            </CP>
 
-            </CONTACT>
+        </CONTACT>
 
 
 

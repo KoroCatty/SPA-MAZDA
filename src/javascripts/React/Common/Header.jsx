@@ -32,7 +32,8 @@ if (reactRoot) {
   ReactDom.render(
     <>
       <BrowserRouter>
-        <header className="header">
+      {/* FooterのTopへ戻るボタンでこのidまで飛んでくる */}
+        <header className="header" id="scroll__top">
           <div className="headerWrap">
             <div className="headerLogo">
               <img src={logo} alt="Logo" />

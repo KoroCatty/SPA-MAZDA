@@ -6,13 +6,12 @@ import {HomeAccess} from "../Components/Home/HomeAccess.jsx";
 
 
 
-
-
 const Eco: React.FC = () => {
 
   return (
     <>
       <EcoMain />
+      <HomeAccess />
     </>
   );
 

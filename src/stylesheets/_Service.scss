@@ -9,9 +9,8 @@
   background-color: rgb(0, 0, 0);
 
   @media screen and (max-width: 1080px) {
-  padding: 10px;
+    padding: 10px;
   }
-
 
   &Title {
     text-align: center;
@@ -30,80 +29,156 @@
     justify-content: center;
     padding-bottom: 40px;
 
-    @include mq(s) { 
+    @include mq(s) {
       display: block;
+      padding-bottom: 80px;
     }
-  @include mq(m) { 
-  display: block;
+
+    @include mq(m) {
+      display: block;
+      padding-bottom: 80px;
     }
 
     &__img {
       width: 30%;
       height: 50%;
 
-      @include mq(s) { 
+      @include mq(s) {
         width: 100%;
-          }
-      @include mq(m) { 
+      }
+      @include mq(m) {
         width: 100%;
-          }
+      }
     }
 
     .wrapper {
       width: 70%;
       margin-left: 40px;
+
+      @include mq(s) {
+        width: 95%;
+        margin: 0 auto;
+      }
+      @include mq(m) {
+        width: 95%;
+        margin: 0 auto;
+      }
     }
 
-// 2のみ width変更
+    // 2のみ width変更
     &__info.extra {
       width: 100%;
       margin-left: 0;
+
+      @include mq(s) {
+      }
+      @include mq(m) {
+      }
     }
 
     &__info {
       margin-left: 40px;
       width: 70%;
 
+      @include mq(s) {
+        width: 90%;
+        margin: 0 auto;
+      }
+      @include mq(m) {
+        width: 90%;
+        margin: 0 auto;
+      }
+
       &--title {
         font-size: 1.2rem;
         margin-bottom: 10px;
+
+        @include mq(s) {
+          margin-top: 28px;
+          margin-bottom: 18px;
+        }
+        @include mq(m) {
+          margin-top: 40px;
+          margin-bottom: 20px;
+        }
       }
 
       &--title.small {
         font-size: 0.9rem;
-
         margin-top: 20px;
         margin-bottom: 4px;
+
+        @include mq(s) { 
+          font-size: 1rem;
+        }
+      @include mq(m) { 
+        font-size: 1.2rem;
+        }
       }
 
       &--text {
         font-size: 0.8rem;
+
+        @include mq(s) {
+          font-size: 0.95rem;
+        }
+        @include mq(m) {
+          font-size: 1.1rem;
+        }
       }
 
       &--text.mid {
         font-size: 0.9rem;
       }
 
+      // Button
       &--btn {
         margin-right: auto;
         text-align: right;
+        margin-top: 40px;
+
+        @include mq(s) {
+          text-align: center;
+          margin-top: 40px;
+        }
+
+        @include mq(m) {
+          text-align: center;
+          margin-top: 40px;
+        }
 
         &Link {
-           color: brown;
-           padding: 4px 10px;
-           background-color: white;
-           
-           &--arrow {
+          color: #999999;
+          padding: 4px 10px;
+          background-color: white;
+          border-radius: 3px;
+
+          @include mq(s) {
+            padding: 8px 60px;
+          }
+
+          @include mq(m) {
+            padding: 8px 60px;
+          }
+
+          &--arrow {
             margin-left: 10px;
             font-size: 0.8rem;
-           }
+          }
         }
       }
 
       &--btn.BottomLine {
         border-bottom: 1px solid rgb(255, 255, 255);
         padding-bottom: 20px;
+
+        @include mq(s) { 
+          padding-bottom: 40px;
+        }
+      @include mq(m) { 
+        padding-bottom: 40px;
+        }
+      }
     }
-  }
   }
 }

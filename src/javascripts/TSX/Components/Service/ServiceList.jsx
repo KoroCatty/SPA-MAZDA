@@ -142,7 +142,7 @@ export const ServiceList = () => {
           </div>
           {/* 6  */}
           <div className="serviceItem">
-            <img src={service6} alt="" className="serviceItem__img" />
+            <img src={service1} alt="" className="serviceItem__img" />
 
             <div className="serviceItem__info">
               <h3 className="serviceItem__info--title">マツダジャストフィット車検</h3>
