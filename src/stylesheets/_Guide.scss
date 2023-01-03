@@ -16,9 +16,21 @@
     max-width: 1080px;
     margin: 0 auto;
 
+    @include mq(s) {
+    }
+    @include mq(m) {
+    }
+
     &__wrap {
       display: flex;
       justify-content: center;
+
+      @include mq(s) {
+        display: block;
+      }
+      @include mq(m) {
+        display: block;
+      }
     }
 
     &__wrap.reverse {
@@ -30,7 +42,21 @@
       width: 70%;
       margin-left: 8px;
 
+      @include mq(s) {
+        width: 100%;
+        text-align: center;
+      }
+      @include mq(m) {
+        width: 100%;
+        text-align: center;
+      }
+
       &--img {
+        @include mq(s) {
+        }
+        @include mq(m) {
+          width: 100%;
+        }
       }
 
       &--title {
@@ -42,6 +68,12 @@
       &--flex {
         display: flex;
         align-items: center;
+
+        @include mq(s) {
+        }
+        @include mq(m) {
+          padding-left: 30px;
+        }
       }
 
       &--left {
@@ -56,11 +88,51 @@
       &--right {
         margin-left: 20px;
         font-size: 1rem;
+
+        @include mq(s) {
+          text-align: start;
+          font-size: 0.9rem;
+        }
+        @include mq(m) {
+        }
+
+        &Text {
+          @include mq(s) {
+            display: block;
+            text-align: start;
+          }
+          @include mq(m) {
+          }
+        }
+      }
+
+      // <br />　無効化
+      .NoBreak {
+        @include mq(s) {
+          display: none;
+        }
+        display: none;
+      }
+
+      &--right.mt {
+
+        @include mq(s) {
+          margin-top: 10px;
+        }
       }
     }
 
     &__wrapItem.mg_right {
       margin-right: 2vw;
+
+      @include mq(s) {
+        margin: 0 auto;
+        width: 95%;
+      }
+      @include mq(m) {
+        margin: 0 auto;
+        width: 95%;
+      }
     }
 
     &__wrapItem--text {
@@ -82,10 +154,20 @@
   color: black;
   margin: 100px 0;
 
+  @include mq(s) { 
+margin: 20px 0;
+  }
+@include mq(m) { 
+  }
+
   &__title {
     text-align: center;
     font-size: 1.55rem;
     margin-bottom: 80px;
+
+    @include mq(s) { 
+      margin-bottom: 20px;
+        }
   }
 
   &__wrap {
@@ -94,8 +176,22 @@
     display: flex;
     justify-content: center;
 
+    @include mq(s) { 
+      display: block;
+    }
+  @include mq(m) { 
+    }
+
     &Item {
       width: 47%;
+
+      @include mq(s) { 
+width: 90%;
+margin: 0 auto;
+      }
+    @include mq(m) { 
+    
+      }
 
       &--img {
       }
@@ -103,20 +199,44 @@
       &--title {
         font-size: 1.5rem;
         margin-left: 6px;
+
+        @include mq(s) { 
+       font-size: 1.2rem;
+       font-weight: 900;
+                  }
       }
 
       &--caption {
         font-size: 1rem;
         margin-left: 8px;
+
+        @include mq(s) { 
+margin: 8px 0 40px 8px;
+font-size: 0.9rem;
+        }
       }
     }
 
     &Item:first-child {
       margin-right: 60px;
+
+      @include mq(s) { 
+        margin: 0 auto;
+      }
+    @include mq(m) { 
+    
+      }
     }
   }
 
   &__wrap:last-child {
     margin-top: 80px;
+
+    @include mq(s) { 
+     margin: 0 auto;
+            }
+          @include mq(m) { 
+          
+            }
   }
 }

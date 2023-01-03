@@ -10,13 +10,14 @@ import Service from '../../TSX/EachPage/Service.tsx';
 import Eco from '../../TSX/EachPage/Eco.tsx';
 import Guide from '../../TSX/EachPage/Guide.tsx';
 
+// IMG
 import logo from '../../../images/logo.png';
-// import gitHubIcon from "../../../../images/icons/icon_github.svg";
-// import facebookIcon from "../../../../images/icons/icon_facebook.svg";
-// import youtubeIcon from "../../../../images/icons/icon_youtube.svg";
+import Phone from '../../../images/phone_icon.svg';
+import Map from '../../../images/map_icon.svg';
+import Email from '../../../images/email_icon.svg';
 
-// 3rd party
-import styled from 'styled-components'; // For Original CSS each component
+
+
 
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -72,7 +73,9 @@ if (reactRoot) {
 
             <div className="headerContact">
               <div className="headerContact__phone">
-                <p className="headerContact__phone--num">054-353-4188</p>
+                <p className="headerContact__phone--num">
+                  <img src={Phone} alt="" className="phoneIcon" />
+                  054-353-4188</p>
                 <p className="headerContact__phone--hours">
                   営業時間 9:00～19:00
                 </p>
@@ -82,16 +85,16 @@ if (reactRoot) {
 
               <div className="headerContact__detail">
                 <div className="headerContact__detail--email">
-                  {/* <!-- <img src="" alt="" className="headerContact__detail--email"> --> */}
+                   <img src={Email} alt="" className="emailIcon" /> 
                   お問い合わせ
                 </div>
                 <div className="headerContact__detail--access">
-                  {/* <!-- <img src="" alt="" className="headerContact__detail--map"> --> */}
+                   <img src={Map} alt="" className="mapIcon" />
                   アクセス
                 </div>
               </div>
             </div>
-            <div className="headerSticky">マツダオフィシャルサイト</div>
+            {/* <div className="headerSticky">マツダオフィシャルサイト</div> */}
             {/* ------------------- */}
             {/*----- Hamburger -----*/}
             {/* ------------------- */}

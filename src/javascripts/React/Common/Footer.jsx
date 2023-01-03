@@ -73,14 +73,28 @@ if (reactRoot) {
                 <div className="footerInfo__wrap">
                     <div className="footerInfo">
 
-                        <div className="footerInfo__logoTitle">
-                            <img src={logo} alt="" className="footerInfo__logoTitle--img" />
-                            <div className="footerInfo__logoTitle--text">マツダオートザム
-                                <p className="footerInfo__logoTitle--text small">
-                                    MAZDA AUTOZAM SHIMIZU
-                                </p>
+                        <article className="footerInfo__article">
+                            <div className="footerInfo__logoTitle">
+                                <img src={logo} alt="" className="footerInfo__logoTitle--img" />
+                                <div className="footerInfo__logoTitle--text">
+                                    マツダオートザム清水
+                                    <div className="footerInfo__logoTitle--text small">
+                                        MAZDA AUTOZAM SHIMIZU
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+
+                            <p className="footerInfo__article--text top">
+                            〒424-0944 静岡県静岡市清水区築地町10-10
+                            </p>
+                            <p className="footerInfo__article--text">
+                            TEL.054-353-4188   FAX.054-353-4181
+                            </p>
+                            <p className="footerInfo__article--text">
+                            営業時間 9:00〜18:00　定休日 毎週水曜日、第2火曜日
+                            </p>
+                        </article>
+
 
                         <div className="footerInfo__calendar">
                             {/* <div className="footerInfo__calendarApp"></div> */}
@@ -102,6 +116,7 @@ if (reactRoot) {
                             {/* <!--営業カレンダー--> */}
                         </div>
                     </div>
+
                 </div>
 
                 <div className="footerMenu">
@@ -168,9 +183,9 @@ if (reactRoot) {
                     <p>©2022 RK-WEB-DESIGN | All Rights Reserved. </p>
                 </CP>
 
-                         {/* Go to Top */}
-                         <GoToTopHoverCSS>
-                         <div>
+                {/* Go to Top */}
+                <GoToTopHoverCSS>
+                    <div>
                         <Scroll to="scroll__top" smooth={true}
                             duration={200} offset={-30}
                             style={{
@@ -186,7 +201,7 @@ if (reactRoot) {
                             トップに戻る
                         </Scroll>
                     </div>
-                    </GoToTopHoverCSS>
+                </GoToTopHoverCSS>
 
             </CONTACT>
 

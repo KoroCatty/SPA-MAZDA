@@ -642,7 +642,7 @@ body {
   &Info {
     display: flex;
     justify-content: center;
-    // align-items: center;
+   padding: 0 8px;
 
     @include mq(s) {
       display: block;
@@ -652,8 +652,39 @@ body {
     }
 
     // 左
+    &__article {
+      width: 40%;
+
+      @include mq(s) {
+        width: 100%;
+        margin: 10px 0 40px 0;
+      }
+      @include mq(m) {
+      width: 100%;
+margin: 20px 0 80px 0;
+      }
+
+      // 一番下の住所などの詳細 
+      &--text {
+        line-height: 2.2;
+        font-size: 0.9rem;
+        margin-left: 10px;
+
+        @include mq(s) {
+          font-size: 0.8rem;
+        }
+        @include mq(m) {
+        // font-size: 3rem;
+        }
+      }
+      &--text.top {
+        margin-top: 20px;
+      }
+
+    }
+
     &__logoTitle {
-      width: 30%;
+      display: flex;
 
       @include mq(s) {
         width: 100%;
@@ -661,11 +692,45 @@ body {
       @include mq(m) {
         width: 100%;
       }
+
+      &--img {
+        width: 60px;
+        height: 60px;
+      }
+
+      &--text {
+        font-size: 1.3rem;
+        margin-left: 4px;
+
+        @include mq(s) { 
+          font-size: 1.5rem;
+          font-weight: 900;
+          transform: translate(0, -2px);
+        }
+      @include mq(m) { 
+        font-size: 1.9rem;
+        font-weight: 900;
+        transform: translate(0, -7px);
+        }
+      }
+      &--text.small {
+        font-size: 0.9rem;
+
+        @include mq(s) { 
+          font-size: 1rem;
+          font-weight: 400;
+        }
+      @include mq(m) { 
+        font-size: 1.2rem;
+        font-weight: 400;
+        }
+      
+      }
     }
 
     // 右
     &__calendar {
-      width: 70%;
+      width: 60%;
       margin-left: 40px;
 
       @include mq(s) {

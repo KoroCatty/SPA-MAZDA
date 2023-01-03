@@ -30,7 +30,11 @@ export const GuideInfo = () => {
                             <h3 className="guideInfo__wrapItem--title">マツダオートザム</h3>
                             <div className="guideInfo__wrapItem--flex">
                                 <div className="guideInfo__wrapItem--left">住所</div>
-                                <div className="guideInfo__wrapItem--right">〒424-0944 &nbsp; 静岡県静岡市清水区菊池峰10-10</div>
+                                <div className="guideInfo__wrapItem--right mt">〒424-0944 &nbsp;
+                                    <span className="guideInfo__wrapItem--rightText">
+                                        静岡県静岡市清水区菊池峰10-10
+                                    </span>
+                                </div>
                             </div>
                             <div className="guideInfo__wrapItem--flex">
                                 <div className="guideInfo__wrapItem--left">TEL</div>
@@ -67,14 +71,14 @@ export const GuideInfo = () => {
                         <div className="guideInfo__wrapItem mg_right">
                             <h3 className="guideInfo__wrapItem--title">サービス工場</h3>
                             <p className="guideInfo__wrapItem--text">
-                                車検、点検はもちろん、お車に関する様々なお困りごと、相談ごと<br />
+                                車検、点検はもちろん、お車に関する様々なお困りごと、相談ごと<br className="NoBreak"/>
                                 何でもご相談ください！<br />
-                                当店のサービススタッフは全員が国家自動車整備士資格を保有し、<br />
+                                当店のサービススタッフは全員が国家自動車整備士資格を保有し、<br className="NoBreak"/>
                                 また、長年の経験をもとに、お客様にベストなご提案をさせて頂きます。<br />
-                                お客様に安心、安全をお届けする事を常に心掛け、<br />
-                                「ここに任せて良かった。車の事は全てお任せしたい」<br />
+                                お客様に安心、安全をお届けする事を常に心掛け、<br className="NoBreak"/>
+                                「ここに任せて良かった。車の事は全てお任せしたい」<br className="NoBreak"/>
                                 <span className="guideInfo__wrapItem--text--narrow">
-                                そんなお声を多くのお客様から頂ける様、精一杯ご対応させて頂きます。<br /></span>
+                                    そんなお声を多くのお客様から頂ける様、精一杯ご対応させて頂きます。<br className="NoBreak"/></span>
                                 皆様のご来店、心よりお待ち申し上げます。
                             </p>
 

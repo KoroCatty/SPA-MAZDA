@@ -99,6 +99,15 @@
       @media screen and (max-width: 1080px) {
         display: none;
       }
+
+      &--num {
+        font-size: 1.2rem;
+      }
+
+      &--hours {
+       text-align: end;
+        font-size: 0.8rem;
+      }
     }
 
     &__bar {
@@ -294,6 +303,24 @@
     }
   }
 }
+// 各種アイコン　/////////////////
+.phoneIcon {
+  width: 11px;
+  margin-right: 8px;
+}
+
+.emailIcon {
+  width: 14px;
+  margin-right: 8px;
+}
+
+.mapIcon {
+  width: 14px;
+  margin-right: 8px;
+  transform: translate(0, 4px);
+}
+
+
 
 // JS control //////////////////
 /*ハンバーガーアイコンをCSSだけで表現*/
