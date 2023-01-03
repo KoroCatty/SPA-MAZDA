@@ -283,6 +283,7 @@ body {
   }
 
   &Btn {
+
     &__link {
       color: rgb(98, 98, 98);
       padding: 4px 12px;
@@ -295,10 +296,25 @@ body {
       border-radius: 2px;
       box-shadow: 1px 0 4px white;
 
+      @include mq(s) { 
+width: 140px;
+margin-right: 8px;
+      }
+    @include mq(m) { 
+    
+      }
+
       span {
         font-size: 0.9rem;
         margin-left: 20px;
         color: rgb(98, 98, 98);
+
+        @include mq(s) { 
+          font-size: 0.8rem;
+                }
+              @include mq(m) { 
+              
+                }
       }
     }
   }
@@ -642,7 +658,7 @@ body {
   &Info {
     display: flex;
     justify-content: center;
-   padding: 0 8px;
+    padding: 0 8px;
 
     @include mq(s) {
       display: block;
@@ -660,11 +676,11 @@ body {
         margin: 10px 0 40px 0;
       }
       @include mq(m) {
-      width: 100%;
-margin: 20px 0 80px 0;
+        width: 100%;
+        margin: 20px 0 80px 0;
       }
 
-      // 一番下の住所などの詳細 
+      // 一番下の住所などの詳細
       &--text {
         line-height: 2.2;
         font-size: 0.9rem;
@@ -674,13 +690,12 @@ margin: 20px 0 80px 0;
           font-size: 0.8rem;
         }
         @include mq(m) {
-        // font-size: 3rem;
+          // font-size: 3rem;
         }
       }
       &--text.top {
         margin-top: 20px;
       }
-
     }
 
     &__logoTitle {
@@ -702,29 +717,28 @@ margin: 20px 0 80px 0;
         font-size: 1.3rem;
         margin-left: 4px;
 
-        @include mq(s) { 
+        @include mq(s) {
           font-size: 1.5rem;
           font-weight: 900;
           transform: translate(0, -2px);
         }
-      @include mq(m) { 
-        font-size: 1.9rem;
-        font-weight: 900;
-        transform: translate(0, -7px);
+        @include mq(m) {
+          font-size: 1.9rem;
+          font-weight: 900;
+          transform: translate(0, -7px);
         }
       }
       &--text.small {
         font-size: 0.9rem;
 
-        @include mq(s) { 
+        @include mq(s) {
           font-size: 1rem;
           font-weight: 400;
         }
-      @include mq(m) { 
-        font-size: 1.2rem;
-        font-weight: 400;
+        @include mq(m) {
+          font-size: 1.2rem;
+          font-weight: 400;
         }
-      
       }
     }
 
@@ -757,33 +771,30 @@ margin: 20px 0 80px 0;
       justify-content: space-between;
       padding: 0 8px;
 
-      @include mq(s) { 
+      @include mq(s) {
         display: block;
         text-align: center;
       }
-    @include mq(m) { 
-    display: block;
-    text-align: center;
-
-
+      @include mq(m) {
+        display: block;
+        text-align: center;
       }
     }
 
     &__item {
-
-      @include mq(s) { 
+      @include mq(s) {
         margin-top: 28px;
 
         :first-child {
           margin-top: 0;
         }
       }
-    @include mq(m) { 
-      margin-top: 28px;
+      @include mq(m) {
+        margin-top: 28px;
 
-      :first-child {
-        margin-top: 0;
-      }
+        :first-child {
+          margin-top: 0;
+        }
       }
 
       &--img {
@@ -791,7 +802,6 @@ margin: 20px 0 80px 0;
     }
   }
 
-  
   // SNS -----------
   &SNS {
     background-color: rgb(28, 28, 28);
@@ -800,6 +810,13 @@ margin: 20px 0 80px 0;
     justify-content: center;
     padding: 40px 0 80px 0;
     border-top: 1px solid rgb(164, 164, 164);
+
+    @include mq(s) { 
+padding: 40px 0 50px 0;
+    }
+  @include mq(m) { 
+  
+    }
 
     &:hover {
       border-top: 1px solid rgb(255, 255, 255);
@@ -810,20 +827,79 @@ margin: 20px 0 80px 0;
       margin-left: 60px;
       text-align: center;
 
-      @include mq(s) { 
-
+      @include mq(s) {
         &:first-child {
           margin-left: 0;
         }
-
-
       }
-    @include mq(m) { 
-    
+      @include mq(m) {
       }
     }
     // &__item.second {
 
     // }
   }
+}
+//------------------------
+// wordpress API ---------
+//------------------------
+.commonTitle.API {
+  color: black;
+}
+.WordpressPost {
+  color: black;
+  display: flex;
+  justify-content: center;
+  // flex-wrap: wrap;
+  margin: 28px auto 60px auto;
+  max-width: 1080px;
+
+  @include mq(s) {
+   margin: 20px auto;
+  }
+
+  &__item {
+    width: 28%;
+
+    &:hover {
+      transition: all 0.4s ease;
+      transform: translate(0, 4px);
+      display: block;
+      filter: brightness(0.8)
+    }
+
+    @include mq(s) {
+      width: 40%;
+
+      &:last-child {
+        display: none;
+      }
+    }
+
+    &:nth-child(2) {
+      margin: 0 20px;
+
+      @include mq(s) {
+        margin-right: 0;
+      }
+    }
+
+    &__link {
+     
+    
+    }
+    .WordpressPost__img {
+      box-shadow: 1px 3px 2px rgb(118, 117, 117);
+    }
+  
+    &__title {
+  font-size: 0.9rem;
+    }
+  
+      @include mq(s) {
+      font-size: 0.7rem;
+    }
+ 
+  }
+
 }

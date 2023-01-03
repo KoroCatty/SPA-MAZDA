@@ -3,7 +3,6 @@ import ReactDom from 'react-dom';
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
-// import '../../../main.js';
 
 // import { useState } from 'react';
 // const [name, setName] = useState(true);
@@ -112,7 +111,6 @@ export const HomeNews = () => {
           <div className="newsRight"></div>
         </div>
       </section>
-
 
 
 

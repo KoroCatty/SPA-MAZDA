@@ -247,7 +247,7 @@ select {
   }
 }
 .headerTitle {
-  margin-left: -45%;
+  margin-left: -41%;
 }
 @media screen and (max-width: 1080px) {
   .headerTitle {
@@ -305,6 +305,13 @@ select {
   .header .headerContact__phone {
     display: none;
   }
+}
+.header .headerContact__phone--num {
+  font-size: 1.2rem;
+}
+.header .headerContact__phone--hours {
+  text-align: end;
+  font-size: 0.8rem;
 }
 .header .headerContact__bar {
   width: 72px;
@@ -480,6 +487,20 @@ select {
     font-size: 0.9rem;
   }
 }
+.phoneIcon {
+  width: 11px;
+  margin-right: 8px;
+}
+.emailIcon {
+  width: 14px;
+  margin-right: 8px;
+}
+.mapIcon {
+  width: 14px;
+  margin-right: 8px;
+  -webkit-transform: translate(0, 4px);
+          transform: translate(0, 4px);
+}
 /*ハンバーガーアイコンをCSSだけで表現*/
 .BurgerIcon.disappear {
   -webkit-transform: rotate(45deg);
@@ -521,6 +542,16 @@ select {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (max-width:480px) {
+  .guideInfo__wrap {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) and (min-width:480px) {
+  .guideInfo__wrap {
+    display: block;
+  }
+}
 .guideInfo__wrap.reverse {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -531,6 +562,21 @@ select {
 .guideInfo__wrapItem {
   width: 70%;
   margin-left: 8px;
+}
+@media screen and (max-width:480px) {
+  .guideInfo__wrapItem {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 767px) and (min-width:480px) {
+  .guideInfo__wrapItem {
+    width: 100%;
+    text-align: center;
+  }
+  .guideInfo__wrapItem--img {
+    width: 100%;
+  }
 }
 .guideInfo__wrapItem--title {
   font-size: 27px;
@@ -545,6 +591,11 @@ select {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (max-width: 767px) and (min-width:480px) {
+  .guideInfo__wrapItem--flex {
+    padding-left: 30px;
+  }
+}
 .guideInfo__wrapItem--left {
   border: 1px solid rgb(207, 207, 207);
   border-radius: 3px;
@@ -557,8 +608,41 @@ select {
   margin-left: 20px;
   font-size: 1rem;
 }
+@media screen and (max-width:480px) {
+  .guideInfo__wrapItem--right {
+    text-align: start;
+    font-size: 0.9rem;
+  }
+  .guideInfo__wrapItem--rightText {
+    display: block;
+    text-align: start;
+  }
+}
+.guideInfo__wrapItem .NoBreak {
+  display: none;
+}
+@media screen and (max-width:480px) {
+  .guideInfo__wrapItem .NoBreak {
+    display: none;
+  }
+  .guideInfo__wrapItem--right.mt {
+    margin-top: 10px;
+  }
+}
 .guideInfo__wrapItem.mg_right {
   margin-right: 2vw;
+}
+@media screen and (max-width:480px) {
+  .guideInfo__wrapItem.mg_right {
+    margin: 0 auto;
+    width: 95%;
+  }
+}
+@media screen and (max-width: 767px) and (min-width:480px) {
+  .guideInfo__wrapItem.mg_right {
+    margin: 0 auto;
+    width: 95%;
+  }
 }
 .guideInfo__wrapItem--text {
   font-size: 1rem;
@@ -572,10 +656,20 @@ select {
   color: black;
   margin: 100px 0;
 }
+@media screen and (max-width:480px) {
+  .GuideCamp {
+    margin: 20px 0;
+  }
+}
 .GuideCamp__title {
   text-align: center;
   font-size: 1.55rem;
   margin-bottom: 80px;
+}
+@media screen and (max-width:480px) {
+  .GuideCamp__title {
+    margin-bottom: 20px;
+  }
 }
 .GuideCamp__wrap {
   max-width: 1080px;
@@ -587,22 +681,55 @@ select {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (max-width:480px) {
+  .GuideCamp__wrap {
+    display: block;
+  }
+}
 .GuideCamp__wrapItem {
   width: 47%;
+}
+@media screen and (max-width:480px) {
+  .GuideCamp__wrapItem {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 .GuideCamp__wrapItem--title {
   font-size: 1.5rem;
   margin-left: 6px;
 }
+@media screen and (max-width:480px) {
+  .GuideCamp__wrapItem--title {
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+}
 .GuideCamp__wrapItem--caption {
   font-size: 1rem;
   margin-left: 8px;
 }
+@media screen and (max-width:480px) {
+  .GuideCamp__wrapItem--caption {
+    margin: 8px 0 40px 8px;
+    font-size: 0.9rem;
+  }
+}
 .GuideCamp__wrapItem:first-child {
   margin-right: 60px;
 }
+@media screen and (max-width:480px) {
+  .GuideCamp__wrapItem:first-child {
+    margin: 0 auto;
+  }
+}
 .GuideCamp__wrap:last-child {
   margin-top: 80px;
+}
+@media screen and (max-width:480px) {
+  .GuideCamp__wrap:last-child {
+    margin: 0 auto;
+  }
 }
 .commonTitle.serviceList {
   color: black;
@@ -1589,6 +1716,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0 8px;
 }
 @media screen and (max-width:480px) {
   .footerInfo {
@@ -1599,9 +1727,39 @@ body {
   .footerInfo {
     display: block;
   }
+}
+.footerInfo__article {
+  width: 40%;
+}
+@media screen and (max-width:480px) {
+  .footerInfo__article {
+    width: 100%;
+    margin: 10px 0 40px 0;
+  }
+}
+@media screen and (max-width: 767px) and (min-width:480px) {
+  .footerInfo__article {
+    width: 100%;
+    margin: 20px 0 80px 0;
+  }
+}
+.footerInfo__article--text {
+  line-height: 2.2;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+@media screen and (max-width:480px) {
+  .footerInfo__article--text {
+    font-size: 0.8rem;
+  }
+}
+.footerInfo__article--text.top {
+  margin-top: 20px;
 }
 .footerInfo__logoTitle {
-  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 @media screen and (max-width:480px) {
   .footerInfo__logoTitle {
@@ -1611,10 +1769,49 @@ body {
 @media screen and (max-width: 767px) and (min-width:480px) {
   .footerInfo__logoTitle {
     width: 100%;
+  }
+}
+.footerInfo__logoTitle--img {
+  width: 60px;
+  height: 60px;
+}
+.footerInfo__logoTitle--text {
+  font-size: 1.3rem;
+  margin-left: 4px;
+}
+@media screen and (max-width:480px) {
+  .footerInfo__logoTitle--text {
+    font-size: 1.5rem;
+    font-weight: 900;
+    -webkit-transform: translate(0, -2px);
+            transform: translate(0, -2px);
+  }
+}
+@media screen and (max-width: 767px) and (min-width:480px) {
+  .footerInfo__logoTitle--text {
+    font-size: 1.9rem;
+    font-weight: 900;
+    -webkit-transform: translate(0, -7px);
+            transform: translate(0, -7px);
+  }
+}
+.footerInfo__logoTitle--text.small {
+  font-size: 0.9rem;
+}
+@media screen and (max-width:480px) {
+  .footerInfo__logoTitle--text.small {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 767px) and (min-width:480px) {
+  .footerInfo__logoTitle--text.small {
+    font-size: 1.2rem;
+    font-weight: 400;
   }
 }
 .footerInfo__calendar {
-  width: 70%;
+  width: 60%;
   margin-left: 40px;
 }
 @media screen and (max-width:480px) {

@@ -7,6 +7,7 @@ import {HomeTopic} from "../Components/Home/HomeTopic.jsx";
 import {HomeChirashi} from "../Components/Home/HomeChirashi.jsx";
 import {HomeAccess} from "../Components/Home/HomeAccess.jsx";
 
+import {ApiFetch} from '../../React/Common/ApiFetch.jsx';
 
 
 
@@ -20,8 +21,7 @@ const Home: React.FC = () => {
       <HomeTopic />
       <HomeChirashi />
       <HomeAccess />
- 
-
+      <ApiFetch />
 
 
     </>

@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "17": "^0.0.0",
+    "axios": "^1.2.2",
     "babel-loader": "^8.2.3",
     "core-js": "^3.21.0",
     "favicons": "^7.0.0-beta.3",
