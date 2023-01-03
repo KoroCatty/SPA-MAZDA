@@ -61,8 +61,6 @@ const GoToTopHoverCSS = styled.div`
     }
 `
 
-
-
 // -----------------------------------------
 const reactRoot = document.getElementById('Footer');
 if (reactRoot) {
