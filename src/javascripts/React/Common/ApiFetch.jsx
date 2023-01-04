@@ -31,7 +31,7 @@ export const ApiFetch = () => {
                     posts.map(post => <li key={post.id}> {post.title} </li>)
 
                     posts.map(post => <a key={post.id} href={post.link}>
-                        <li > {post.title.rendered}</li>
+                        <li > {post.title.render~ed}</li>
                
                     </a>
                     )
