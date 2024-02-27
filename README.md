@@ -1,7 +1,7 @@
 # MAZDA SPA with Webpack (Custom Webpack Configuration)
 
 <!-- Image -->
-![Mazda React SPA](./mazda-spa.png)
+![Mazda React SPA](./mazda.jpg)
 [Website](https://mazda.kazu-dev.com/)
 
 This project is built before React VITE emerged and using React and custom Webpack configuration. 
