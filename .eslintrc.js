@@ -12,10 +12,16 @@ module.exports = {
     //importやexportなど使ってもエラーが出なくなる
     sourceType: 'module',
     // "ecmaVersion": 13,
+    ecmaFeatures: {
+      jsx: true, // JSXを有効にする
+    },
   },
   extends: ['eslint:recommended', 'plugin:prettier/recommended'],
   rules: {
     //更新をしない変数にconst以外が使われていたらエラーが出るように
-    'prefer-const': 'error',
+    // 'prefer-const': 'error',
+    //未使用の変数があったらエラーが出ないようにする
+    'no-unused-vars': 'off',
+    //変数名がcamelCaseでない場合エラーが出ないようにする
   },
 };

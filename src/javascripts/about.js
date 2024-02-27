@@ -29,8 +29,6 @@
 //   open.classList.remove("hide"); ///追加されたクラスを取り除く
 // });
 
-
-
 // // Switch Color
 // const langEl = document.querySelector('.langWrap');
 // const link = document.querySelectorAll('.langWrap__switch');

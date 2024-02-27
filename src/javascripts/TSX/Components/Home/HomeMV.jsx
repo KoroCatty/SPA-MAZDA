@@ -1,44 +1,22 @@
-import * as React from "react";
+import * as React from 'react';
 import ReactDom from 'react-dom';
-
-import { useState } from "react";
-import { useEffect } from "react";
-
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
+import HomeMv1 from '../../../../images/mv1.jpg';
+import HomeMv2 from '../../../../images/mv2.jpg';
+import HomeMv3 from '../../../../images/mv3.jpg';
 
-import HomeMv1 from "../../../../images/mv1.jpg";
-import HomeMv2 from "../../../../images/mv2.jpg";
-import HomeMv3 from "../../../../images/mv3.jpg";
+import mvBanner1 from '../../../../images/banner1.svg';
+import mvBanner2 from '../../../../images/banner2.svg';
+import mvBanner3 from '../../../../images/banner3.jpg';
 
-import mvBanner1 from "../../../../images/banner1.svg";
-import mvBanner2 from "../../../../images/banner2.svg";
-import mvBanner3 from "../../../../images/banner3.jpg";
-
-
-
-// import jQuery from "jquery";
-// import $ from 'jquery';
-// import 'slick-carousel';
-// import 'slick-carousel/slick/slick.css'; // 追加
-// import 'slick-carousel/slick/slick-theme.css'; // 追加
-
-
-// import jQuery from "jquery";
-// import $ from 'jquery';
-// import 'slick-carousel';
-
-
-import Slider from "react-slick";
+import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'; // 追加
 import 'slick-carousel/slick/slick-theme.css'; // 追加
 
-
-
 // // -----------------------------------------
 export const HomeMV = (props) => {
-
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -46,7 +24,6 @@ export const HomeMV = (props) => {
         className={className}
         style={{
           ...style,
-          // backgroundColor: "red",
         }}
         onClick={onClick}
       />
@@ -60,29 +37,14 @@ export const HomeMV = (props) => {
         className={className}
         style={{
           ...style,
-          // background: "green",
         }}
         onClick={onClick}
       />
     );
   }
 
-  /* state変数を定義する↓  copied*/
-  // const [active, setActive] = useState(false);
-
-  // const classToggle = () => {
-  //   setActive(!active)
-  // }
-
   // 各セッティング
   const settings = {
-    // className: "center",
-    // centerMode: true,
-    // centerPadding: "60px",
-    // rows: 2,
-    // slidesPerRow: 2,
-    // variableWidth: true,
-
     dots: false,
     infinite: true,
     speed: 500,
@@ -101,10 +63,7 @@ export const HomeMV = (props) => {
           // slidesToShow: 0.9,
           slidesToScroll: 1,
           infinite: true,
-          // rows: 1,
-          // centerMode: true,
-          // variableWidth: true,
-        }
+        },
       },
       {
         breakpoint: 1080,
@@ -113,15 +72,15 @@ export const HomeMV = (props) => {
           slidesToScroll: 1,
           infinite: true,
           dots: true,
-        }
+        },
       },
     ],
 
     // ドットのセッティング
-    appendDots: dots => (
+    appendDots: (dots) => (
       <div
         style={{
-          backgroundColor: "#000000",
+          backgroundColor: '#000000',
           // backgroundImage: "url({HomeMv1})",
         }}
       >
@@ -129,27 +88,24 @@ export const HomeMV = (props) => {
       </div>
     ),
 
-    customPaging: i => (
+    customPaging: (i) => (
       <div
         style={{
-          backgroundColor: "white",
-          color: "white",
-          height: "4px",
+          backgroundColor: 'white',
+          color: 'white',
+          height: '4px',
           fontSize: 0,
-          boxShadow: "1px 1px 7px white",//光らせる
+          boxShadow: '1px 1px 7px white', //光らせる
         }}
       >
         {i + 1}
       </div>
-    )
+    ),
   };
 
-
   return (
-
     <>
       <section className="mv">
-
         <Slider {...settings} className="mvWrap">
           <div className="mvWrap__item">
             <img src={HomeMv1} alt="" className="mvWrap__item--img" />
@@ -165,40 +121,24 @@ export const HomeMV = (props) => {
           </div>
         </Slider>
 
-
         <div className="mvBanner">
           <div className="mvBanner__item">
-             <Link className="mvBanner__item--link" to="/YouTube">
+            <Link className="mvBanner__item--link" to="/YouTube">
               <img src={mvBanner1} alt="" className="mvBanner__item--img" />
-           </Link>
+            </Link>
           </div>
           <div className="mvBanner__item">
-             <Link className="mvBanner__item--link" to="/Blog">
+            <Link className="mvBanner__item--link" to="/Blog">
               <img src={mvBanner2} alt="" className="mvBanner__item--img" />
-           </Link>
+            </Link>
           </div>
           <div className="mvBanner__item">
-             <Link className="mvBanner__item--link" to="/Recruit">
+            <Link className="mvBanner__item--link" to="/Recruit">
               <img src={mvBanner3} alt="" className="mvBanner__item--img" />
-           </Link>
+            </Link>
           </div>
         </div>
-
-
-
-
       </section>
-
-
-
-
     </>
-
-
-  )
-}
-
-{
-
-}
-
+  );
+};

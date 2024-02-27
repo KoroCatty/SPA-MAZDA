@@ -16,8 +16,6 @@ import Phone from '../../../images/phone_icon.svg';
 import Map from '../../../images/map_icon.svg';
 import Email from '../../../images/email_icon.svg';
 
-
-
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 // <Link>タグが押されたらページトップに移動
@@ -29,7 +27,9 @@ function ChangePageTop() {
 function CloseBurger() {
   const ccc = document.querySelector('#nav-close');
   const ddd = document.querySelector('.nav-unshown');
-  const fff = document.querySelector('.navDrawer__input:checked ~ .BurgerContent');
+  const fff = document.querySelector(
+    '.navDrawer__input:checked ~ .BurgerContent'
+  );
 
   // input内の checkedをfalseに変える
   ccc.checked = false;
@@ -38,16 +38,14 @@ function CloseBurger() {
 
   // Change burger Icon shape
   const Burger = document.querySelector('.BurgerIcon');
-  Burger.classList.toggle("disappear");
+  Burger.classList.toggle('disappear');
 }
 
-  // Change burger Icon shape function
+// Change burger Icon shape function
 function ChangeShape() {
   const Burger = document.querySelector('.BurgerIcon');
-  Burger.classList.toggle("disappear");
+  Burger.classList.toggle('disappear');
 }
-
-
 
 // -----------------------------------------
 const reactRoot = document.getElementById('Header');
@@ -55,9 +53,9 @@ if (reactRoot) {
   ReactDom.render(
     <>
       <BrowserRouter>
-      {/*  */}
-      {/* FooterのTopへ戻るボタンでこのidまで飛んでくる */}
-        <header className="header" id="scroll__top"  >
+        {/*  */}
+        {/* FooterのTopへ戻るボタンでこのidまで飛んでくる */}
+        <header className="header" id="scroll__top">
           <div className="headerWrap">
             <div className="headerLogo">
               <img src={logo} alt="Logo" />
@@ -72,7 +70,8 @@ if (reactRoot) {
               <div className="headerContact__phone">
                 <p className="headerContact__phone--num">
                   <img src={Phone} alt="" className="phoneIcon" />
-                  054-353-4188</p>
+                  054-353-4188
+                </p>
                 <p className="headerContact__phone--hours">
                   営業時間 9:00～19:00
                 </p>
@@ -82,16 +81,16 @@ if (reactRoot) {
 
               <div className="headerContact__detail">
                 <div className="headerContact__detail--email">
-                   <img src={Email} alt="" className="emailIcon" /> 
+                  <img src={Email} alt="" className="emailIcon" />
                   お問い合わせ
                 </div>
                 <div className="headerContact__detail--access">
-                   <img src={Map} alt="" className="mapIcon" />
+                  <img src={Map} alt="" className="mapIcon" />
                   アクセス
                 </div>
               </div>
             </div>
-            {/* <div className="headerSticky">マツダオフィシャルサイト</div> */}
+
             {/* ------------------- */}
             {/*----- Hamburger -----*/}
             {/* ------------------- */}
@@ -104,7 +103,7 @@ if (reactRoot) {
 
               {/* <!-- これはバーガーを作るもの。 ここにnav-inputがあり上のinputとシンクロナイズする--> */}
               <label id="nav-open" htmlFor="nav-input" onClick={ChangeShape}>
-                <span className='BurgerIcon'></span>
+                <span className="BurgerIcon"></span>
               </label>
 
               {/* <!-- ここにもnav-inputがあり、上のinputとシンクロナイズする。nav-closeに黒幕を貼ってる -->
@@ -123,41 +122,49 @@ if (reactRoot) {
                   <img src={logo} alt="" className="BurgerContent__item--img" />
                 </li>
                 <li className="BurgerContent__item">
-                  <Link className="BurgerContent__item--link" to="/" 
-                  onClick={ ()=> {
-                    ChangePageTop();
-                    CloseBurger();
-                  }}
-                   >
+                  <Link
+                    className="BurgerContent__item--link"
+                    to="/"
+                    onClick={() => {
+                      ChangePageTop();
+                      CloseBurger();
+                    }}
+                  >
                     HOME
                   </Link>
                 </li>
                 <li className="BurgerContent__item">
-                  <Link className="BurgerContent__item--link small" to="/service" 
-                   onClick={ ()=> {
-                    ChangePageTop();
-                    CloseBurger();
-                  }}
+                  <Link
+                    className="BurgerContent__item--link small"
+                    to="/service"
+                    onClick={() => {
+                      ChangePageTop();
+                      CloseBurger();
+                    }}
                   >
                     サービス・アフターサポート
                   </Link>
                 </li>
                 <li className="BurgerContent__item">
-                  <Link className="BurgerContent__item--link" to="/Eco" 
-                   onClick={ ()=> {
-                    ChangePageTop();
-                    CloseBurger();
-                  }}
+                  <Link
+                    className="BurgerContent__item--link"
+                    to="/Eco"
+                    onClick={() => {
+                      ChangePageTop();
+                      CloseBurger();
+                    }}
                   >
                     エコアクション
                   </Link>
                 </li>
                 <li className="BurgerContent__item">
-                  <Link className="BurgerContent__item--link" to="/guide" 
-                   onClick={ ()=> {
-                    ChangePageTop();
-                    CloseBurger();
-                  }}
+                  <Link
+                    className="BurgerContent__item--link"
+                    to="/guide"
+                    onClick={() => {
+                      ChangePageTop();
+                      CloseBurger();
+                    }}
                   >
                     店舗案内
                   </Link>
@@ -222,18 +229,6 @@ if (reactRoot) {
           <Route path="guide" element={<Guide />}></Route>
         </Routes>
       </BrowserRouter>
-
-
-
-           {/* <!-- --- ------ --- -->
-  <!-- wordpress posts -->
-  <!-- --- ------ --- --> */}
-  {/* <section className="wp" >
-    <h2 className="wp__texts--title">
-      <span className="worksContainer__texts--title">BLOG</span>
-    </h2>
-    <ul id="viewPosts"></ul>
-  </section> */}
     </>,
     reactRoot
   );
@@ -242,50 +237,3 @@ if (reactRoot) {
 }
 
 export default Header;
-
-
-
-// {
-//   // Wordpress API -----------------------------------
-//   setTimeout(BlogPopUp, 1000);
-//   // BlogPopUp();
-//   function BlogPopUp() {
-//     const getPosts = "https://rk-nihongo.com/wp-json/wp/v2/posts?_embed&per_page=3"
-  
-//   fetch(getPosts).then(
-//     response => {
-//       return response.json(); // get JSON data$
-//     }).then(data => {
-  
-//   for (let i = 0; i < data.length; i++) {
-    
-//       var date2 = new Date(data[i].date);
-//       var year = date2.getFullYear();
-//       var month = date2.getMonth() + 1;
-//       var day = date2.getDate();
-  
-//       // li tag
-//       viewPosts.innerHTML += '<li class="posts">' // contentwrapper
-  
-//       // a tag
-//       + '<a href="' + data[i].link + '" class="linkID_' + data[i].id +'">'
-  
-//   // img tag
-//       + '<img src="' + data[i]._embedded["wp:featuredmedia"][0].source_url + '" alt="' + data[i].title.rendered +'">'
-//   //  time tag
-  
-//      + '<time class="postTime dfont" itemprop="datePublished" datetime="' + data[i].date + '">' + year + '年' + month + '月' + day + '日' + '</time>'
-  
-//     //  p tag
-//       + '<p class="postTitle">' + data[i].title.rendered + '</p>'
-//       + '</a>' // href end
-//       + '</li>' // end content
-//     }
-  
-//   }).catch(err => {
-//     // Do something with error here
-//     console.log('Error: ' + err)
-//   })
-//   }
-// }
-

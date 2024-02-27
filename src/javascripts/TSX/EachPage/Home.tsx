@@ -1,19 +1,12 @@
-// This file goes to Header.jsx
 import * as React from 'react';
 
-import {HomeMV} from "../Components/Home/HomeMV.jsx";
-import {HomeNews} from "../Components/Home/HomeNews.jsx";
-import {HomeTopic} from "../Components/Home/HomeTopic.jsx";
-import {HomeChirashi} from "../Components/Home/HomeChirashi.jsx";
-import {HomeAccess} from "../Components/Home/HomeAccess.jsx";
-
-import {ApiFetch} from '../../React/Common/ApiFetch.jsx';
-
-
-
+import { HomeMV } from '../Components/Home/HomeMV.jsx';
+import { HomeNews } from '../Components/Home/HomeNews.jsx';
+import { HomeTopic } from '../Components/Home/HomeTopic.jsx';
+import { HomeChirashi } from '../Components/Home/HomeChirashi.jsx';
+import { HomeAccess } from '../Components/Home/HomeAccess.jsx';
 
 const Home: React.FC = () => {
-
   return (
     <>
       <HomeMV />
@@ -21,19 +14,7 @@ const Home: React.FC = () => {
       <HomeTopic />
       <HomeChirashi />
       <HomeAccess />
-      <ApiFetch />
-
-
     </>
   );
-
 };
-
-
-
-{
-}
-
-
 export default Home;
-// Header.jsxでこのファイルを輸入する
