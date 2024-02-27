@@ -90,7 +90,6 @@ if (reactRoot) {
                 </div>
               </div>
             </div>
-            {/* <div className="headerSticky">マツダオフィシャルサイト</div> */}
 
             {/* ------------------- */}
             {/*----- Hamburger -----*/}
@@ -230,16 +229,6 @@ if (reactRoot) {
           <Route path="guide" element={<Guide />}></Route>
         </Routes>
       </BrowserRouter>
-
-      {/* <!-- --- ------ --- -->
-  <!-- wordpress posts -->
-  <!-- --- ------ --- --> */}
-      {/* <section className="wp" >
-    <h2 className="wp__texts--title">
-      <span className="worksContainer__texts--title">BLOG</span>
-    </h2>
-    <ul id="viewPosts"></ul>
-  </section> */}
     </>,
     reactRoot
   );
@@ -248,47 +237,3 @@ if (reactRoot) {
 }
 
 export default Header;
-
-// {
-//   // Wordpress API -----------------------------------
-//   setTimeout(BlogPopUp, 1000);
-//   // BlogPopUp();
-//   function BlogPopUp() {
-//     const getPosts = "https://rk-nihongo.com/wp-json/wp/v2/posts?_embed&per_page=3"
-
-//   fetch(getPosts).then(
-//     response => {
-//       return response.json(); // get JSON data$
-//     }).then(data => {
-
-//   for (let i = 0; i < data.length; i++) {
-
-//       var date2 = new Date(data[i].date);
-//       var year = date2.getFullYear();
-//       var month = date2.getMonth() + 1;
-//       var day = date2.getDate();
-
-//       // li tag
-//       viewPosts.innerHTML += '<li class="posts">' // contentwrapper
-
-//       // a tag
-//       + '<a href="' + data[i].link + '" class="linkID_' + data[i].id +'">'
-
-//   // img tag
-//       + '<img src="' + data[i]._embedded["wp:featuredmedia"][0].source_url + '" alt="' + data[i].title.rendered +'">'
-//   //  time tag
-
-//      + '<time class="postTime dfont" itemprop="datePublished" datetime="' + data[i].date + '">' + year + '年' + month + '月' + day + '日' + '</time>'
-
-//     //  p tag
-//       + '<p class="postTitle">' + data[i].title.rendered + '</p>'
-//       + '</a>' // href end
-//       + '</li>' // end content
-//     }
-
-//   }).catch(err => {
-//     // Do something with error here
-//     console.log('Error: ' + err)
-//   })
-//   }
-// }
