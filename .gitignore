@@ -1,5 +1,9 @@
 node_modules/
 .DS_Store
 .env.local
+.env
 ./src/javascripts/firebase.js
 firebase.js
+
+.htaccess
+.htpasswd

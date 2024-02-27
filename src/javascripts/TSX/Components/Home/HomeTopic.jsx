@@ -20,9 +20,8 @@ export const HomeTopic = () => {
       <section className="topic">
         <h2 className="commonTitle">TOPIC</h2>
 
-{/*  */}
+        {/*  */}
         <div className="topicWrap">
-
           <div className="topicWrap__card">
             <img
               src={topic1}
@@ -37,13 +36,13 @@ export const HomeTopic = () => {
               <p className="topicWrap__card--text small">
                 一部取り扱いのない車両もございます。詳しくは店舗までお問い合わせください
               </p>
-              
+
               <Link className="topicWrap__card--link" to="/topic">
                 <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
-                  </div>
-                </Link>
+                </div>
+              </Link>
             </div>
           </div>
 
@@ -61,14 +60,13 @@ export const HomeTopic = () => {
               <p className="topicWrap__card--text small">
                 一部取り扱いのない車両もございます。詳しくは店舗までお問い合わせください
               </p>
-            
+
               <Link className="topicWrap__card--link" to="/topic">
                 <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
-                  </div>
-                </Link>
-
+                </div>
+              </Link>
             </div>
           </div>
 
@@ -87,22 +85,18 @@ export const HomeTopic = () => {
                 一部取り扱いのない車両もございます。詳しくは店舗までお問い合わせください
               </p>
 
-        
-                <Link className="topicWrap__card--link" to="/topic">
+              <Link className="topicWrap__card--link" to="/topic">
                 <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
-                  </div>
-                </Link>
-           
+                </div>
+              </Link>
             </div>
           </div>
-
         </div>
 
-{/*  */}
+        {/*  */}
         <div className="topicWrap center">
-
           <div className="topicWrap__card">
             <img
               src={topic4}
@@ -121,8 +115,8 @@ export const HomeTopic = () => {
                 <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
-                  </div>
-                </Link>
+                </div>
+              </Link>
             </div>
           </div>
 
@@ -144,8 +138,8 @@ export const HomeTopic = () => {
                 <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
-                  </div>
-                </Link>
+                </div>
+              </Link>
             </div>
           </div>
 
@@ -167,16 +161,14 @@ export const HomeTopic = () => {
                 <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
-                  </div>
-                </Link>
+                </div>
+              </Link>
             </div>
           </div>
-
         </div>
 
-{/*  */}
+        {/*  */}
         <div className="topicWrap">
-
           <div className="topicWrap__card">
             <img
               src={topic7}
@@ -195,8 +187,8 @@ export const HomeTopic = () => {
                 <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
-                  </div>
-                </Link>
+                </div>
+              </Link>
             </div>
           </div>
 
@@ -218,8 +210,8 @@ export const HomeTopic = () => {
                 <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
-                  </div>
-                </Link>
+                </div>
+              </Link>
             </div>
           </div>
 
@@ -241,16 +233,11 @@ export const HomeTopic = () => {
                 <div className="topicWrap__card--btn">
                   VIEW MORE
                   <span className="topicWrap__card--linkIcon">＞</span>
-                  </div>
-                </Link>
+                </div>
+              </Link>
             </div>
           </div>
-
         </div>
-
-
-
-
       </section>
     </>
   );

@@ -105,7 +105,7 @@
       }
 
       &--hours {
-       text-align: end;
+        text-align: end;
         font-size: 0.8rem;
       }
     }
@@ -320,13 +320,11 @@
   transform: translate(0, 4px);
 }
 
-
-
 // JS control //////////////////
 /*ハンバーガーアイコンをCSSだけで表現*/
-.BurgerIcon.disappear{
+.BurgerIcon.disappear {
   transform: rotate(45deg);
-  transition: all 0.2s ;
+  transition: all 0.2s;
   margin-top: 8px;
 }
 .BurgerIcon.disappear:before {
@@ -334,7 +332,7 @@
 }
 .BurgerIcon.disappear:after {
   transform: rotate(92deg);
-  transition: all 0.2s ;
+  transition: all 0.2s;
   top: 0;
   left: 0;
 }

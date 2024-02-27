@@ -49,12 +49,6 @@
 //   //   ]
 //   // });
 
-
-
-
-
-
-
 //   // // No.3
 //   // // feature (ポートフォリオ)
 //   // $('.serviceFeature').slick({
@@ -71,27 +65,25 @@
 //   //   swipe: false,
 //   //   responsive: [
 //   //     {
-//   //       breakpoint: 1000, 
+//   //       breakpoint: 1000,
 //   //       settings: {
 //   //         slidesToShow: 5
 //   //       }
 //   //     },
 //   //     {
-//   //       breakpoint: 900, 
+//   //       breakpoint: 900,
 //   //       settings: {
 //   //         slidesToShow: 4
 //   //       }
 //   //     },
 //   //     {
-//   //       breakpoint: 768, 
+//   //       breakpoint: 768,
 //   //       settings: {
 //   //         slidesToShow: 3.5
 //   //       }
 //   //     }
 //   //   ]
 //   // });
-
-
 
 //   // No.4
 //   //slick slider for works (ポートフォリオ)
@@ -117,6 +109,5 @@
 //       }
 //     ]
 //   });
-
 
 //   });

@@ -10,6 +10,5 @@
 
 // 実際のコードはTsContact.tsに記載していく
 
-
 // import jQuery from "jquery";
 // import $ from 'jquery';

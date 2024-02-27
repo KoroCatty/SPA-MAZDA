@@ -108,11 +108,11 @@
         margin-top: 20px;
         margin-bottom: 4px;
 
-        @include mq(s) { 
+        @include mq(s) {
           font-size: 1rem;
         }
-      @include mq(m) { 
-        font-size: 1.2rem;
+        @include mq(m) {
+          font-size: 1.2rem;
         }
       }
 
@@ -172,11 +172,11 @@
         border-bottom: 1px solid rgb(255, 255, 255);
         padding-bottom: 20px;
 
-        @include mq(s) { 
+        @include mq(s) {
           padding-bottom: 40px;
         }
-      @include mq(m) { 
-        padding-bottom: 40px;
+        @include mq(m) {
+          padding-bottom: 40px;
         }
       }
     }

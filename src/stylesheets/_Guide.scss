@@ -115,7 +115,6 @@
       }
 
       &--right.mt {
-
         @include mq(s) {
           margin-top: 10px;
         }
@@ -154,10 +153,10 @@
   color: black;
   margin: 100px 0;
 
-  @include mq(s) { 
-margin: 20px 0;
+  @include mq(s) {
+    margin: 20px 0;
   }
-@include mq(m) { 
+  @include mq(m) {
   }
 
   &__title {
@@ -165,9 +164,9 @@ margin: 20px 0;
     font-size: 1.55rem;
     margin-bottom: 80px;
 
-    @include mq(s) { 
+    @include mq(s) {
       margin-bottom: 20px;
-        }
+    }
   }
 
   &__wrap {
@@ -176,21 +175,20 @@ margin: 20px 0;
     display: flex;
     justify-content: center;
 
-    @include mq(s) { 
+    @include mq(s) {
       display: block;
     }
-  @include mq(m) { 
+    @include mq(m) {
     }
 
     &Item {
       width: 47%;
 
-      @include mq(s) { 
-width: 90%;
-margin: 0 auto;
+      @include mq(s) {
+        width: 90%;
+        margin: 0 auto;
       }
-    @include mq(m) { 
-    
+      @include mq(m) {
       }
 
       &--img {
@@ -200,19 +198,19 @@ margin: 0 auto;
         font-size: 1.5rem;
         margin-left: 6px;
 
-        @include mq(s) { 
-       font-size: 1.2rem;
-       font-weight: 900;
-                  }
+        @include mq(s) {
+          font-size: 1.2rem;
+          font-weight: 900;
+        }
       }
 
       &--caption {
         font-size: 1rem;
         margin-left: 8px;
 
-        @include mq(s) { 
-margin: 8px 0 40px 8px;
-font-size: 0.9rem;
+        @include mq(s) {
+          margin: 8px 0 40px 8px;
+          font-size: 0.9rem;
         }
       }
     }
@@ -220,11 +218,10 @@ font-size: 0.9rem;
     &Item:first-child {
       margin-right: 60px;
 
-      @include mq(s) { 
+      @include mq(s) {
         margin: 0 auto;
       }
-    @include mq(m) { 
-    
+      @include mq(m) {
       }
     }
   }
@@ -232,11 +229,10 @@ font-size: 0.9rem;
   &__wrap:last-child {
     margin-top: 80px;
 
-    @include mq(s) { 
-     margin: 0 auto;
-            }
-          @include mq(m) { 
-          
-            }
+    @include mq(s) {
+      margin: 0 auto;
+    }
+    @include mq(m) {
+    }
   }
 }

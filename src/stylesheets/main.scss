@@ -283,7 +283,6 @@ body {
   }
 
   &Btn {
-
     &__link {
       color: rgb(98, 98, 98);
       padding: 4px 12px;
@@ -295,11 +294,10 @@ body {
       margin-bottom: 28px;
       border-radius: 2px;
       box-shadow: 1px 0 4px white;
-      @include mq(s) { 
-
-margin-right: 8px;
+      @include mq(s) {
+        margin-right: 8px;
       }
-    @include mq(m) { 
+      @include mq(m) {
       }
 
       span {
@@ -307,12 +305,11 @@ margin-right: 8px;
         margin-left: 20px;
         color: rgb(98, 98, 98);
 
-        @include mq(s) { 
+        @include mq(s) {
           font-size: 0.8rem;
-                }
-              @include mq(m) { 
-              
-                }
+        }
+        @include mq(m) {
+        }
       }
     }
   }
@@ -809,11 +806,10 @@ margin-right: 8px;
     padding: 40px 0 80px 0;
     border-top: 1px solid rgb(164, 164, 164);
 
-    @include mq(s) { 
-padding: 40px 0 50px 0;
+    @include mq(s) {
+      padding: 40px 0 50px 0;
     }
-  @include mq(m) { 
-  
+    @include mq(m) {
     }
 
     &:hover {
@@ -853,7 +849,7 @@ padding: 40px 0 50px 0;
   max-width: 1080px;
 
   @include mq(s) {
-   margin: 20px auto;
+    margin: 20px auto;
   }
 
   &__item {
@@ -863,7 +859,7 @@ padding: 40px 0 50px 0;
       transition: all 0.4s ease;
       transform: translate(0, 4px);
       display: block;
-      filter: brightness(0.8)
+      filter: brightness(0.8);
     }
 
     @include mq(s) {
@@ -883,21 +879,17 @@ padding: 40px 0 50px 0;
     }
 
     &__link {
-     
-    
     }
     .WordpressPost__img {
       box-shadow: 1px 3px 2px rgb(118, 117, 117);
     }
-  
+
     &__title {
-  font-size: 0.9rem;
+      font-size: 0.9rem;
     }
-  
-      @include mq(s) {
+
+    @include mq(s) {
       font-size: 0.7rem;
     }
- 
   }
-
 }

@@ -1,4 +1,4 @@
-// TSX型定義ファイル 
+// TSX型定義ファイル
 declare module '*.jpg';
 declare module '*.png';
 declare module '*.svg';

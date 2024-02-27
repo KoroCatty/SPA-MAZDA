@@ -4,11 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');// v3～
 
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const TerserPlugin = require('terser-webpack-plugin');
 
-// webpack needs to be explicitly required for not having process undefined error
 const webpack = require('webpack');
 
 // manifestを出力 when you build
@@ -25,8 +23,6 @@ module.exports = {
   },
   entry: {
     main: './src/javascripts/main.js',
-    // contact: './src/javascripts/contact.js',
-    // about: './src/javascripts/about.js'
   },
   stats: {
     children: true,//waringsの内容を表示
@@ -36,7 +32,6 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     // filename: 'javascripts/main.js',
     filename: 'javascripts/[name]-[contenthash].js',
-    // publicPath: '/webpack', //For gh-pages deployment
     publicPath: '/',  // For Netlify deployment　出力されるCSSなどからの画像のパスを指定
   },
 
@@ -44,7 +39,7 @@ module.exports = {
     splitChunks: {
       chunks: 'initial',//importしているものを分割の対象とする
       cacheGroups: {
-        vendor: {//ライブラリの中のパッケージを分割することを宣言している?重複している3rdパーティのライブラリ（jQueryやvelocityなど）をまとめたファイルvendor fileを作り、各jsファイルはそれを読み込む。
+        vendor: {
           test: /node_modules/,//分割の対象を指定。(jqueryなどはここにある)
           name: 'vendor',
         },
@@ -186,22 +181,6 @@ module.exports = {
           },
         ],
       },
-      // pug (if you install Pug, you can use below)
-      // {
-      //   test: /\.pug/,
-      //   use: [
-      //     {
-      //       loader: 'html-loader',
-      //     },
-      //     {
-      //       loader: 'pug-html-loader',
-      //       options: {
-      //         pretty: true,
-      //       },
-      //     },
-      //   ],
-      // },
-
     ],
   },
   plugins: [
@@ -215,17 +194,6 @@ module.exports = {
       filename: 'index.html',//出力形式
       chunks: ['main'],//entry point名を指定する(このjsファイルを読み込む)
     }),
-    // new HtmlWebpackPlugin({
-    //   template: './src/templates/contact.html',
-    //   filename: 'contact.html',
-    //   chunks: ['contact'],//entry point名を指定する(このjsファイルを読み込む)
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: './src/templates/about.html',
-    //   filename: 'about.html',
-    //   chunks: ['about'],
-    // }),
-
     //ここに記載することにより, jQueryを各ファイルでimportする必要がなくなる
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -234,41 +202,8 @@ module.exports = {
 
     //Eslintを実行()内にoptionを渡せる。デフォルトではjs。
     new ESLintPlugin(),
-
-    // new CleanWebpackPlugin(),
-
-    // fix "process is not defined" error:
-    // (do "npm install process" before running the build)
     new webpack.ProvidePlugin({
       process: 'process/browser',
     }),
-
-
-    // create a manifest.json when you build but HTML file doesn't recognize this but pug can recognize manifest.json in Public?
-    // new WebpackPwaManifest({
-    //   name: 'My Progressive Web App',
-    //   short_name: 'MyPWA',
-    //   description: 'My awesome Progressive Web App!',
-    //   background_color: '#ffffff',
-    //   //can be null, use-credentials or anonymous
-    //   crossorigin: 'use-credentials', 
-
-    // icons: [
-    //   {
-    //     src: path.resolve('./public/logo192.png'),
-    //     sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
-    //   },
-    // {
-    //   src: path.resolve('./public/logo192.png'),
-    //   size: '1024x1024' // you can also use the specifications pattern
-    // },
-    // {
-    //   src: path.resolve('./public/logo192.png'),
-    //   size: '1024x1024',
-    //   purpose: 'maskable'
-    // },
-    // ]
-    // }),
-
   ]
 };
